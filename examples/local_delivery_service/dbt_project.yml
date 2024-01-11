@@ -1,0 +1,20 @@
+name: local_delivery_service
+profile: athena
+
+vars:
+  # Identifers for building subscription queries with TIKI.
+  #
+  # These are internal to TIKI but need to be used to craft the subscription
+  # queries that will be used to materialize tables in my cleanroom.
+  tiki_demographics_table: tiki.demographics
+  tiki_receipts_table: tiki.receipts
+  tiki_transactions_table: tiki.transactions
+
+  # Table subscription details
+  table_raw_premium: stg_delivery__pfd
+  table_raw_doordash: stg_delivery__dd
+  table_raw_ubereats: stg_delivery__ue
+
+  # I'm using a named AWS Profile to source temporary credentials
+  # from IAM Identity Center
+  aws_profile: tiki-sandbox-timoguin.Developer 

@@ -1,0 +1,13 @@
+athena:
+  outputs:
+    dev:
+      type: athena
+      threads: 8
+      aws_profile_name: '{{ var("aws_profile") }}'
+      region_name: '{{ var("athena_region") }}'
+      database: '{{ var("athena_database") }}'
+      schema: '{{ var("athena_schema") }}'
+      workgroup: '{{ var("athena_workgroup") }}'
+      s3_staging_dir: '{{ var("athena_s3_staging_dir") }}'
+
+  target: dev

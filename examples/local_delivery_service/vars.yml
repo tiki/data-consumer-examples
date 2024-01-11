@@ -1,0 +1,20 @@
+# --------------------------------------------
+# These variables are intended to be fed into the dbt CLI by passing
+# them as a string via --vars.
+#
+# This is required in order to make them available to the profiles.yml
+# template context.
+# --------------------------------------------
+
+# The database name created for the cleanroom within my account
+athena_database: awsdatacatalog
+athena_schema: cr_default
+
+# My Athena workgroup and query results bucket
+athena_region: us-east-2
+athena_workgroup: primary
+athena_s3_staging_dir: s3://athena-query-results-767398138063-us-east-2/
+
+# I'm using a named AWS Profile to source temporary credentials
+# from IAM Identity Center
+aws_profile: tiki-sandbox-timoguin.Developer 
