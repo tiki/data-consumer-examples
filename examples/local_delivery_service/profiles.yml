@@ -3,11 +3,20 @@ athena:
     dev:
       type: athena
       threads: 8
-      aws_profile_name: '{{ var("aws_profile") }}'
-      region_name: '{{ var("athena_region") }}'
-      database: '{{ var("athena_database") }}'
-      schema: '{{ var("athena_schema") }}'
-      workgroup: '{{ var("athena_workgroup") }}'
-      s3_staging_dir: '{{ var("athena_s3_staging_dir") }}'
+      # These vars aren't worth the trouble because they require passing everything
+      # in via the --vars CLI flag. The profiles.yml template context is limited.
+      #
+      # aws_profile_name: '{{ var("aws_profile") }}'
+      # region_name: '{{ var("athena_region") }}'
+      # database: '{{ var("athena_database") }}'
+      # schema: '{{ var("athena_schema") }}'
+      # workgroup: '{{ var("athena_workgroup") }}'
+      # s3_staging_dir: '{{ var("athena_s3_staging_dir") }}'
+      aws_profile_name: tiki-sandbox-timoguin.Developer
+      region_name: us-east-2
+      database: awsdatacatalog
+      schema: cr_default
+      workgroup: primary
+      s3_staging_dir: s3://athena-query-results-767398138063-us-east-2/
 
   target: dev
