@@ -2,3 +2,5 @@
 logs/
 target/
 *.swp
+dbt.log
+tmp*
