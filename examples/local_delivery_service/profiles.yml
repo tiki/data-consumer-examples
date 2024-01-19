@@ -13,10 +13,10 @@ athena:
       # workgroup: '{{ var("athena_workgroup") }}'
       # s3_staging_dir: '{{ var("athena_s3_staging_dir") }}'
       aws_profile_name: tiki-sandbox-timoguin.Developer
-      region_name: us-east-1
+      region_name: us-east-2
       database: awsdatacatalog
       schema: cr_default
       workgroup: primary
-      s3_staging_dir: s3://athena-query-results-767398138063-us-east-1/
+      s3_staging_dir: s3://athena-query-results-767398138063-us-east-2/
 
   target: dev

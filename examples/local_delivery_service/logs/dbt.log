@@ -412,3 +412,1634 @@ Runtime Error
 [0m00:15:38.626249 [debug] [MainThread]: Command `dbt compile` succeeded at 00:15:38.626104 after 2.00 seconds
 [0m00:15:38.626616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3671c7ecb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f366ff22080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f366ea6bb20>]}
 [0m00:15:38.626945 [debug] [MainThread]: Flushing usage events
+[0m08:55:37.639596 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdfd175f640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdfcf889fc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdfcf889f60>]}
+
+
+============================== 08:55:37.643171 | 42bdea67-bada-42d9-a4ab-c9eb94df0e5f ==============================
+[0m08:55:37.643171 [info ] [MainThread]: Running with dbt=1.7.4
+[0m08:55:37.643645 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'version_check': 'True', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt compile', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m08:55:38.021871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '42bdea67-bada-42d9-a4ab-c9eb94df0e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdfcf88a0b0>]}
+[0m08:55:38.086394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '42bdea67-bada-42d9-a4ab-c9eb94df0e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdfce7e6350>]}
+[0m08:55:38.097203 [info ] [MainThread]: Registered adapter: athena=1.7.1
+[0m08:55:38.105794 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m08:55:38.110360 [debug] [MainThread]: Failed to load parsed file from disk at /home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/target/partial_parse.msgpack: bool is not allowed for map key when strict_map_key=True
+[0m08:55:38.110640 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '42bdea67-bada-42d9-a4ab-c9eb94df0e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdfcea39780>]}
+[0m08:55:38.931099 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '42bdea67-bada-42d9-a4ab-c9eb94df0e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdfcd3849a0>]}
+[0m08:55:38.939939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '42bdea67-bada-42d9-a4ab-c9eb94df0e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdfcd3870a0>]}
+[0m08:55:38.940431 [info ] [MainThread]: Found 1 model, 4 sources, 0 exposures, 0 metrics, 423 macros, 0 groups, 0 semantic models
+[0m08:55:38.940983 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '42bdea67-bada-42d9-a4ab-c9eb94df0e5f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdfcd36bf70>]}
+[0m08:55:38.942443 [info ] [MainThread]: 
+[0m08:55:38.943174 [debug] [MainThread]: Acquiring new athena connection 'master'
+[0m08:55:38.944217 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog_cr_default_timoguin'
+[0m08:55:38.944525 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:55:39.627132 [debug] [ThreadPool]: On list_awsdatacatalog_cr_default_timoguin: Close
+[0m08:55:39.628268 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:55:39.628559 [debug] [MainThread]: Connection 'list_awsdatacatalog_cr_default_timoguin' was properly closed.
+[0m08:55:39.628866 [error] [MainThread]: Encountered an error:
+
+[0m08:55:39.648257 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 90, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 75, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 168, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 197, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 244, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 284, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/main.py", line 371, in compile
+    results = task.run()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 474, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 434, in execute_with_hooks
+    self.before_run(adapter, selected_uids)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 421, in before_run
+    self.populate_adapter_cache(adapter)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 412, in populate_adapter_cache
+    adapter.set_relations_cache(self.manifest)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/base/impl.py", line 519, in set_relations_cache
+    self._relations_cache_for_schemas(manifest, required_schemas)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/base/impl.py", line 492, in _relations_cache_for_schemas
+    for future in as_completed(futures):
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 245, in as_completed
+    waiter.event.wait(wait_timeout)
+  File "/usr/lib/python3.10/threading.py", line 607, in wait
+    signaled = self._cond.wait(timeout)
+  File "/usr/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+KeyboardInterrupt
+
+[0m08:55:39.649054 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_wall_clock_time": 2.0418377, "process_user_time": 2.536977, "process_kernel_time": 0.099881, "process_mem_max_rss": "134036", "process_in_blocks": "72440", "process_out_blocks": "1824", "command_success": false}
+[0m08:55:39.649481 [debug] [MainThread]: Command `dbt compile` failed at 08:55:39.649377 after 2.04 seconds
+[0m08:55:39.649764 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdfd175f640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdfcd3efd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdfcd3ee770>]}
+[0m08:55:39.650052 [debug] [MainThread]: Flushing usage events
+[0m08:55:43.725017 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf5eb9b640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf5cc7de40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf5cc7dde0>]}
+
+
+============================== 08:55:43.726818 | 3d3109ba-7b39-4dfe-a61c-40539b8a7062 ==============================
+[0m08:55:43.726818 [info ] [MainThread]: Running with dbt=1.7.4
+[0m08:55:43.727248 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt clean', 'send_anonymous_usage_stats': 'True'}
+[0m08:55:43.784859 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3d3109ba-7b39-4dfe-a61c-40539b8a7062', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf5cc7e710>]}
+[0m08:55:43.805402 [debug] [MainThread]: Resource report: {"command_name": "clean", "command_success": true, "command_wall_clock_time": 0.11107977, "process_user_time": 1.334673, "process_kernel_time": 0.039841, "process_mem_max_rss": "93036", "process_in_blocks": "88", "process_out_blocks": "0"}
+[0m08:55:43.805868 [debug] [MainThread]: Command `dbt clean` succeeded at 08:55:43.805756 after 0.11 seconds
+[0m08:55:43.806158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf5eb9b640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf5cc7e6b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fcf5ce4a1d0>]}
+[0m08:55:43.806444 [debug] [MainThread]: Flushing usage events
+[0m08:55:47.067121 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc6336f640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc614adfc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc614adf60>]}
+
+
+============================== 08:55:47.069098 | d2e31629-b650-4614-833e-9eeff577b6a1 ==============================
+[0m08:55:47.069098 [info ] [MainThread]: Running with dbt=1.7.4
+[0m08:55:47.069493 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt compile', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m08:55:47.327109 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'd2e31629-b650-4614-833e-9eeff577b6a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc614ae0b0>]}
+[0m08:55:47.390769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'd2e31629-b650-4614-833e-9eeff577b6a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc60416350>]}
+[0m08:55:47.391418 [info ] [MainThread]: Registered adapter: athena=1.7.1
+[0m08:55:47.397459 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m08:55:47.397822 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m08:55:47.398141 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'd2e31629-b650-4614-833e-9eeff577b6a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc6065d780>]}
+[0m08:55:48.145239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'd2e31629-b650-4614-833e-9eeff577b6a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc5f139810>]}
+[0m08:55:48.150626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'd2e31629-b650-4614-833e-9eeff577b6a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc5ef687c0>]}
+[0m08:55:48.150990 [info ] [MainThread]: Found 1 model, 4 sources, 0 exposures, 0 metrics, 423 macros, 0 groups, 0 semantic models
+[0m08:55:48.151300 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'd2e31629-b650-4614-833e-9eeff577b6a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc5ef69630>]}
+[0m08:55:48.152290 [info ] [MainThread]: 
+[0m08:55:48.152893 [debug] [MainThread]: Acquiring new athena connection 'master'
+[0m08:55:48.153810 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog_cr_default_timoguin'
+[0m08:55:48.154175 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:55:48.702272 [debug] [ThreadPool]: On list_awsdatacatalog_cr_default_timoguin: Close
+[0m08:55:48.703870 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:55:48.704181 [debug] [MainThread]: Connection 'list_awsdatacatalog_cr_default_timoguin' was properly closed.
+[0m08:55:48.704508 [error] [MainThread]: Encountered an error:
+The SSO session associated with this profile has expired or is otherwise invalid. To refresh this SSO session run aws sso login with the corresponding profile.
+[0m08:55:48.711049 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/credentials.py", line 2160, in _get_credentials
+    response = client.get_role_credentials(**kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/client.py", line 553, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/client.py", line 1009, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.UnauthorizedException: An error occurred (UnauthorizedException) when calling the GetRoleCredentials operation: Session token not found or invalid
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 90, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 75, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 168, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 197, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 244, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 284, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/main.py", line 371, in compile
+    results = task.run()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 474, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 434, in execute_with_hooks
+    self.before_run(adapter, selected_uids)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 421, in before_run
+    self.populate_adapter_cache(adapter)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 412, in populate_adapter_cache
+    adapter.set_relations_cache(self.manifest)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/base/impl.py", line 519, in set_relations_cache
+    self._relations_cache_for_schemas(manifest, required_schemas)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/base/impl.py", line 495, in _relations_cache_for_schemas
+    for relation in future.result():
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/utils.py", line 471, in connected
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/impl.py", line 700, in list_relations_without_caching
+    data_catalog = self._get_data_catalog(schema_relation.database)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/impl.py", line 687, in _get_data_catalog
+    catalog_id = sts.get_caller_identity()["Account"]
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/client.py", line 553, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/client.py", line 989, in _make_api_call
+    http, parsed_response = self._make_request(
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/client.py", line 1015, in _make_request
+    return self._endpoint.make_request(operation_model, request_dict)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/endpoint.py", line 119, in make_request
+    return self._send_request(request_dict, operation_model)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/endpoint.py", line 198, in _send_request
+    request = self.create_request(request_dict, operation_model)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/endpoint.py", line 134, in create_request
+    self._event_emitter.emit(
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/hooks.py", line 412, in emit
+    return self._emitter.emit(aliased_event_name, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/hooks.py", line 256, in emit
+    return self._emit(event_name, kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/hooks.py", line 239, in _emit
+    response = handler(**kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/signers.py", line 105, in handler
+    return self.sign(operation_name, request)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/signers.py", line 186, in sign
+    auth = self.get_auth_instance(**kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/signers.py", line 301, in get_auth_instance
+    frozen_credentials = credentials.get_frozen_credentials()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/credentials.py", line 634, in get_frozen_credentials
+    self._refresh()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/credentials.py", line 522, in _refresh
+    self._protected_refresh(is_mandatory=is_mandatory_refresh)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/credentials.py", line 538, in _protected_refresh
+    metadata = self._refresh_using()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/credentials.py", line 685, in fetch_credentials
+    return self._get_cached_credentials()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/credentials.py", line 695, in _get_cached_credentials
+    response = self._get_credentials()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/botocore/credentials.py", line 2162, in _get_credentials
+    raise UnauthorizedSSOTokenError()
+botocore.exceptions.UnauthorizedSSOTokenError: The SSO session associated with this profile has expired or is otherwise invalid. To refresh this SSO session run aws sso login with the corresponding profile.
+
+[0m08:55:48.711998 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_wall_clock_time": 1.676017, "process_user_time": 2.458883, "process_kernel_time": 0.079963, "process_mem_max_rss": "133208", "process_in_blocks": "624", "process_out_blocks": "1840", "command_success": false}
+[0m08:55:48.712428 [debug] [MainThread]: Command `dbt compile` failed at 08:55:48.712324 after 1.68 seconds
+[0m08:55:48.712714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc6336f640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc5f0ee1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fdc5f0edc90>]}
+[0m08:55:48.713010 [debug] [MainThread]: Flushing usage events
+[0m08:56:29.205552 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb83c9d7640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb83ab09fc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb83ab09f60>]}
+
+
+============================== 08:56:29.207451 | 2e73aa0d-cd91-44da-8019-0d6214d1dcaf ==============================
+[0m08:56:29.207451 [info ] [MainThread]: Running with dbt=1.7.4
+[0m08:56:29.207875 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt compile', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m08:56:29.468530 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2e73aa0d-cd91-44da-8019-0d6214d1dcaf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb83ab0a0b0>]}
+[0m08:56:29.532686 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2e73aa0d-cd91-44da-8019-0d6214d1dcaf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb839942350>]}
+[0m08:56:29.533307 [info ] [MainThread]: Registered adapter: athena=1.7.1
+[0m08:56:29.539247 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m08:56:29.540963 [debug] [MainThread]: Failed to load parsed file from disk at /home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/target/partial_parse.msgpack: bool is not allowed for map key when strict_map_key=True
+[0m08:56:29.541237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '2e73aa0d-cd91-44da-8019-0d6214d1dcaf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb839c71780>]}
+[0m08:56:30.332112 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2e73aa0d-cd91-44da-8019-0d6214d1dcaf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb8396318a0>]}
+[0m08:56:30.337557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2e73aa0d-cd91-44da-8019-0d6214d1dcaf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb8396330a0>]}
+[0m08:56:30.337929 [info ] [MainThread]: Found 1 model, 4 sources, 0 exposures, 0 metrics, 423 macros, 0 groups, 0 semantic models
+[0m08:56:30.338254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2e73aa0d-cd91-44da-8019-0d6214d1dcaf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb83961bf70>]}
+[0m08:56:30.339272 [info ] [MainThread]: 
+[0m08:56:30.339870 [debug] [MainThread]: Acquiring new athena connection 'master'
+[0m08:56:30.341014 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog_cr_default_timoguin'
+[0m08:56:30.341427 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:56:31.667967 [debug] [ThreadPool]: Athena adapter: Schema 'cr_default_timoguin' does not exist - Ignoring: An error occurred (EntityNotFoundException) when calling the GetTables operation: Database cr_default_timoguin not found.
+[0m08:56:31.669087 [debug] [ThreadPool]: On list_awsdatacatalog_cr_default_timoguin: Close
+[0m08:56:31.669938 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2e73aa0d-cd91-44da-8019-0d6214d1dcaf', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb8396338b0>]}
+[0m08:56:31.670553 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m08:56:31.670891 [info ] [MainThread]: 
+[0m08:56:31.675044 [debug] [Thread-1 (]: Began running node model.local_delivery_service.transactions_unioned
+[0m08:56:31.675680 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_awsdatacatalog_cr_default_timoguin, now model.local_delivery_service.transactions_unioned)
+[0m08:56:31.676030 [debug] [Thread-1 (]: Began compiling node model.local_delivery_service.transactions_unioned
+[0m08:56:31.682626 [debug] [Thread-1 (]: Writing injected SQL for node "model.local_delivery_service.transactions_unioned"
+[0m08:56:31.683403 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (compile): 08:56:31.676238 => 08:56:31.683212
+[0m08:56:31.683696 [debug] [Thread-1 (]: Began executing node model.local_delivery_service.transactions_unioned
+[0m08:56:31.684015 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (execute): 08:56:31.683859 => 08:56:31.683869
+[0m08:56:31.684640 [debug] [Thread-1 (]: Finished running node model.local_delivery_service.transactions_unioned
+[0m08:56:31.686659 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:56:31.686941 [debug] [MainThread]: Connection 'model.local_delivery_service.transactions_unioned' was properly closed.
+[0m08:56:31.687401 [debug] [MainThread]: Command end result
+[0m08:56:31.692593 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 2.517872, "process_user_time": 2.619335, "process_kernel_time": 0.079675, "process_mem_max_rss": "142812", "process_in_blocks": "328", "process_out_blocks": "2720"}
+[0m08:56:31.693027 [debug] [MainThread]: Command `dbt compile` succeeded at 08:56:31.692921 after 2.52 seconds
+[0m08:56:31.693309 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb83c9d7640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb839ba68f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb839b08310>]}
+[0m08:56:31.693598 [debug] [MainThread]: Flushing usage events
+[0m08:57:10.581260 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59ff9c7520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59fdca9ed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59fdca9e70>]}
+
+
+============================== 08:57:10.583237 | c2937478-50ec-4e93-963a-de619dd2638c ==============================
+[0m08:57:10.583237 [info ] [MainThread]: Running with dbt=1.7.4
+[0m08:57:10.583639 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'debug': 'False', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt docs serve', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m08:57:10.849657 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c2937478-50ec-4e93-963a-de619dd2638c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59fdca9fc0>]}
+[0m08:57:10.915724 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c2937478-50ec-4e93-963a-de619dd2638c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59fcc99ed0>]}
+[0m08:57:52.450860 [error] [MainThread]: Encountered an error:
+
+[0m08:57:52.468666 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 90, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 75, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 168, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 197, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 244, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/main.py", line 324, in docs_serve
+    results = task.run()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/serve.py", line 28, in run
+    httpd.serve_forever()
+  File "/usr/lib/python3.10/socketserver.py", line 237, in serve_forever
+    self._handle_request_noblock()
+  File "/usr/lib/python3.10/socketserver.py", line 316, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.10/socketserver.py", line 347, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.10/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.10/http/server.py", line 668, in __init__
+    super().__init__(*args, **kwargs)
+  File "/usr/lib/python3.10/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/usr/lib/python3.10/http/server.py", line 433, in handle
+    self.handle_one_request()
+  File "/usr/lib/python3.10/http/server.py", line 401, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.10/socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+KeyboardInterrupt
+
+[0m08:57:52.469591 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_wall_clock_time": 41.919437, "process_user_time": 1.614432, "process_kernel_time": 0.445702, "process_mem_max_rss": "118788", "process_in_blocks": "3336", "process_out_blocks": "2968", "command_success": false}
+[0m08:57:52.470123 [debug] [MainThread]: Command `dbt docs serve` failed at 08:57:52.470016 after 41.92 seconds
+[0m08:57:52.470424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59ff9c7520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59fcc9bcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f59fcc9a4a0>]}
+[0m08:57:52.470747 [debug] [MainThread]: Flushing usage events
+[0m08:58:13.059305 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe072473640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0705a9ff0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0705a9f90>]}
+
+
+============================== 08:58:13.061560 | 8621a8f6-d52f-4244-ab12-6acc2be19d79 ==============================
+[0m08:58:13.061560 [info ] [MainThread]: Running with dbt=1.7.4
+[0m08:58:13.061971 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt docs generate', 'send_anonymous_usage_stats': 'True'}
+[0m08:58:13.322809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8621a8f6-d52f-4244-ab12-6acc2be19d79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe0705aa0e0>]}
+[0m08:58:13.387937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8621a8f6-d52f-4244-ab12-6acc2be19d79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06f6eca30>]}
+[0m08:58:13.388558 [info ] [MainThread]: Registered adapter: athena=1.7.1
+[0m08:58:13.394557 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m08:58:13.396366 [debug] [MainThread]: Failed to load parsed file from disk at /home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/target/partial_parse.msgpack: bool is not allowed for map key when strict_map_key=True
+[0m08:58:13.396661 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '8621a8f6-d52f-4244-ab12-6acc2be19d79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06f372710>]}
+[0m08:58:14.171079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8621a8f6-d52f-4244-ab12-6acc2be19d79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06f188310>]}
+[0m08:58:14.172150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8621a8f6-d52f-4244-ab12-6acc2be19d79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06f1890f0>]}
+[0m08:58:14.172520 [info ] [MainThread]: Found 1 model, 4 sources, 0 exposures, 0 metrics, 423 macros, 0 groups, 0 semantic models
+[0m08:58:14.172857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8621a8f6-d52f-4244-ab12-6acc2be19d79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06f18b790>]}
+[0m08:58:14.173974 [info ] [MainThread]: 
+[0m08:58:14.174569 [debug] [MainThread]: Acquiring new athena connection 'master'
+[0m08:58:14.175502 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog_cr_default_timoguin'
+[0m08:58:14.175886 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:58:15.463120 [debug] [ThreadPool]: Athena adapter: Schema 'cr_default_timoguin' does not exist - Ignoring: An error occurred (EntityNotFoundException) when calling the GetTables operation: Database cr_default_timoguin not found.
+[0m08:58:15.464290 [debug] [ThreadPool]: On list_awsdatacatalog_cr_default_timoguin: Close
+[0m08:58:15.465177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8621a8f6-d52f-4244-ab12-6acc2be19d79', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06e10d000>]}
+[0m08:58:15.465786 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m08:58:15.466110 [info ] [MainThread]: 
+[0m08:58:15.470194 [debug] [Thread-1 (]: Began running node model.local_delivery_service.transactions_unioned
+[0m08:58:15.470878 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_awsdatacatalog_cr_default_timoguin, now model.local_delivery_service.transactions_unioned)
+[0m08:58:15.471276 [debug] [Thread-1 (]: Began compiling node model.local_delivery_service.transactions_unioned
+[0m08:58:15.477104 [debug] [Thread-1 (]: Writing injected SQL for node "model.local_delivery_service.transactions_unioned"
+[0m08:58:15.477669 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (compile): 08:58:15.471506 => 08:58:15.477477
+[0m08:58:15.478020 [debug] [Thread-1 (]: Began executing node model.local_delivery_service.transactions_unioned
+[0m08:58:15.478391 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (execute): 08:58:15.478223 => 08:58:15.478234
+[0m08:58:15.479088 [debug] [Thread-1 (]: Finished running node model.local_delivery_service.transactions_unioned
+[0m08:58:15.481441 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m08:58:15.481922 [debug] [MainThread]: Connection 'model.local_delivery_service.transactions_unioned' was properly closed.
+[0m08:58:15.482679 [debug] [MainThread]: Command end result
+[0m08:58:15.491054 [debug] [MainThread]: Acquiring new athena connection 'generate_catalog'
+[0m08:58:15.491413 [info ] [MainThread]: Building catalog
+[0m08:58:15.492967 [debug] [ThreadPool]: Acquiring new athena connection 'awsdatacatalog.information_schema'
+[0m08:58:15.493286 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m08:58:16.648112 [debug] [ThreadPool]: On awsdatacatalog.information_schema: Close
+[0m08:58:16.648950 [warn ] [MainThread]: Encountered an error while generating catalog: An error occurred (EntityNotFoundException) when calling the GetTables operation: Database cr_default_timoguin not found.
+[0m08:58:16.655016 [error] [MainThread]: dbt encountered 1 failure while writing the catalog
+[0m08:58:16.655446 [info ] [MainThread]: Catalog written to /home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/target/catalog.json
+[0m08:58:16.656720 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_wall_clock_time": 3.628675, "process_user_time": 2.784632, "process_kernel_time": 0.160266, "process_mem_max_rss": "153120", "process_out_blocks": "5664", "command_success": false, "process_in_blocks": "0"}
+[0m08:58:16.657309 [debug] [MainThread]: Command `dbt docs generate` failed at 08:58:16.657137 after 3.63 seconds
+[0m08:58:16.657639 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m08:58:16.657876 [debug] [MainThread]: Connection 'awsdatacatalog.information_schema' was properly closed.
+[0m08:58:16.658206 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe072473640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06f226d40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe06f346b00>]}
+[0m08:58:16.658516 [debug] [MainThread]: Flushing usage events
+[0m08:58:30.607166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1fe2e3640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1fc409f30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1fc409ed0>]}
+
+
+============================== 08:58:30.609057 | b8fd2eac-0152-4e2f-87a3-21ac2d011586 ==============================
+[0m08:58:30.609057 [info ] [MainThread]: Running with dbt=1.7.4
+[0m08:58:30.609483 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt docs serve', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m08:58:30.871147 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b8fd2eac-0152-4e2f-87a3-21ac2d011586', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1fc40a020>]}
+[0m08:58:30.935887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b8fd2eac-0152-4e2f-87a3-21ac2d011586', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1fb3ffe50>]}
+[0m08:58:38.871796 [error] [MainThread]: Encountered an error:
+[Errno 98] Address already in use
+[0m08:58:38.872647 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 90, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 75, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 168, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 197, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 244, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/main.py", line 324, in docs_serve
+    results = task.run()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/serve.py", line 23, in run
+    with socketserver.TCPServer(("", port), SimpleHTTPRequestHandler) as httpd:
+  File "/usr/lib/python3.10/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/usr/lib/python3.10/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 98] Address already in use
+
+[0m08:58:38.873476 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_wall_clock_time": 8.297492, "process_user_time": 1.664114, "process_kernel_time": 0.395734, "process_mem_max_rss": "118820", "process_out_blocks": "2960", "command_success": false, "process_in_blocks": "0"}
+[0m08:58:38.874253 [debug] [MainThread]: Command `dbt docs serve` failed at 08:58:38.874091 after 8.30 seconds
+[0m08:58:38.874593 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1fe2e3640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1fb3fc6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe1fb3fd060>]}
+[0m08:58:38.875004 [debug] [MainThread]: Flushing usage events
+[0m08:59:23.091425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6395a37640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6393b65f00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6393b65ea0>]}
+
+
+============================== 08:59:23.093392 | 61bb3adb-9253-40ba-aeac-94b7d389b783 ==============================
+[0m08:59:23.093392 [info ] [MainThread]: Running with dbt=1.7.4
+[0m08:59:23.093809 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt docs serve --no-browser', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m08:59:23.354433 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '61bb3adb-9253-40ba-aeac-94b7d389b783', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6393b65ff0>]}
+[0m08:59:23.418769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '61bb3adb-9253-40ba-aeac-94b7d389b783', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6392c02cb0>]}
+[0m09:00:28.700365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84802ff580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f847e5edff0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f847e5edf90>]}
+
+
+============================== 09:00:28.702206 | a4feab53-a205-4fd1-b40a-528b19fc9117 ==============================
+[0m09:00:28.702206 [info ] [MainThread]: Running with dbt=1.7.4
+[0m09:00:28.702625 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'fail_fast': 'False', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt build', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:00:28.968729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a4feab53-a205-4fd1-b40a-528b19fc9117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f847e5ee0e0>]}
+[0m09:00:29.035619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a4feab53-a205-4fd1-b40a-528b19fc9117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f847d738a30>]}
+[0m09:00:29.036234 [info ] [MainThread]: Registered adapter: athena=1.7.1
+[0m09:00:29.042416 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m09:00:29.044228 [debug] [MainThread]: Failed to load parsed file from disk at /home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/target/partial_parse.msgpack: bool is not allowed for map key when strict_map_key=True
+[0m09:00:29.044518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a4feab53-a205-4fd1-b40a-528b19fc9117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f847d3b6710>]}
+[0m09:00:29.830014 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a4feab53-a205-4fd1-b40a-528b19fc9117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f847d1d3eb0>]}
+[0m09:00:29.835233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a4feab53-a205-4fd1-b40a-528b19fc9117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f847d1d03a0>]}
+[0m09:00:29.835606 [info ] [MainThread]: Found 1 model, 4 sources, 0 exposures, 0 metrics, 423 macros, 0 groups, 0 semantic models
+[0m09:00:29.836661 [info ] [MainThread]: 
+[0m09:00:29.837283 [debug] [MainThread]: Acquiring new athena connection 'master'
+[0m09:00:29.838570 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog'
+[0m09:00:29.839091 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:00:30.949167 [debug] [ThreadPool]: On list_awsdatacatalog: Close
+[0m09:00:30.950384 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_awsdatacatalog, now create_awsdatacatalog_cr_default_timoguin)
+[0m09:00:30.950960 [debug] [ThreadPool]: Creating schema "database: "awsdatacatalog"
+schema: "cr_default_timoguin"
+"
+[0m09:00:30.957968 [debug] [ThreadPool]: Using athena connection "create_awsdatacatalog_cr_default_timoguin"
+[0m09:00:30.958274 [debug] [ThreadPool]: On create_awsdatacatalog_cr_default_timoguin: -- /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "athena", "target_name": "dev", "connection_name": "create_awsdatacatalog_cr_default_timoguin"} */
+create schema if not exists `awsdatacatalog`.`cr_default_timoguin`
+  
+[0m09:00:30.958510 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:00:31.977357 [debug] [ThreadPool]: Athena adapter: Athena query ID 84f100b7-748a-4c98-8dbf-bb83cf4415ba
+[0m09:00:33.387989 [debug] [ThreadPool]: SQL status: OK -1 in 2.0 seconds
+[0m09:00:33.389123 [debug] [ThreadPool]: Athena adapter: Lakeformation is disabled for "awsdatacatalog"."cr_default_timoguin"
+[0m09:00:33.389496 [debug] [ThreadPool]: On create_awsdatacatalog_cr_default_timoguin: Close
+[0m09:00:33.391148 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog_cr_default_timoguin'
+[0m09:00:33.391476 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:00:34.647237 [debug] [ThreadPool]: On list_awsdatacatalog_cr_default_timoguin: Close
+[0m09:00:34.648252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a4feab53-a205-4fd1-b40a-528b19fc9117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84617554b0>]}
+[0m09:00:34.656912 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m09:00:34.657440 [info ] [MainThread]: 
+[0m09:00:34.660661 [debug] [Thread-1 (]: Began running node model.local_delivery_service.transactions_unioned
+[0m09:00:34.661136 [info ] [Thread-1 (]: 1 of 1 START sql view model cr_default_timoguin.transactions_unioned ........... [RUN]
+[0m09:00:34.661796 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_awsdatacatalog_cr_default_timoguin, now model.local_delivery_service.transactions_unioned)
+[0m09:00:34.662226 [debug] [Thread-1 (]: Began compiling node model.local_delivery_service.transactions_unioned
+[0m09:00:34.668470 [debug] [Thread-1 (]: Writing injected SQL for node "model.local_delivery_service.transactions_unioned"
+[0m09:00:34.669059 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (compile): 09:00:34.662419 => 09:00:34.668853
+[0m09:00:34.669363 [debug] [Thread-1 (]: Began executing node model.local_delivery_service.transactions_unioned
+[0m09:00:34.683840 [debug] [Thread-1 (]: Writing runtime sql for node "model.local_delivery_service.transactions_unioned"
+[0m09:00:34.684585 [debug] [Thread-1 (]: Using athena connection "model.local_delivery_service.transactions_unioned"
+[0m09:00:34.684933 [debug] [Thread-1 (]: On model.local_delivery_service.transactions_unioned: -- /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "athena", "target_name": "dev", "node_id": "model.local_delivery_service.transactions_unioned"} */
+create or replace view
+    "awsdatacatalog"."cr_default_timoguin"."transactions_unioned"
+  as
+    with unioned as (
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__pfd"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__doordash"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__ubereats"
+),
+
+cleaned as (
+    select
+        lower(userid) as userid,
+        lower(transactionid) as transactionid,
+        authorized_date,
+        transaction_date,
+        clean_merchant_name,
+        lower(merchant_name) as merchant_name,
+        transaction_name,
+        amount,
+        payment_channel,
+        category_level1,
+        category_level2,
+        category_level3,
+        num_levels,
+        primary_personal_finance_category,
+        detailed_personal_finance_category,
+        merchant_address,
+        merchant_city,
+        merchant_state,
+        merchant_zip
+)
+
+select * from cleaned
+
+[0m09:00:34.685222 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:00:35.607421 [debug] [Thread-1 (]: Athena adapter: Athena query ID 7b0e99d0-57ac-4e15-b8ba-3e8b9f748c14
+[0m09:00:44.023802 [debug] [Thread-1 (]: Athena adapter: Athena query ID f5acfd77-9002-4894-86da-71bd1dc681d8
+[0m09:00:58.376695 [debug] [Thread-1 (]: Athena adapter: Athena query ID 02e86ee3-68c4-4f38-a66d-bd968ad3798f
+[0m09:01:24.734885 [debug] [Thread-1 (]: Athena adapter: Athena query ID 975b562a-af69-4eca-926c-534ff50f7a81
+[0m09:02:15.391477 [debug] [Thread-1 (]: Athena adapter: Athena query ID 7fd62f35-f75c-4522-9239-ffe09d086820
+[0m09:03:54.068940 [debug] [Thread-1 (]: Athena adapter: Athena query ID 2f2cdd34-68b7-4266-b713-f162b23c11c6
+[0m09:03:56.272787 [debug] [Thread-1 (]: Athena adapter: Error running SQL: -- /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "athena", "target_name": "dev", "node_id": "model.local_delivery_service.transactions_unioned"} */
+create or replace view
+    "awsdatacatalog"."cr_default_timoguin"."transactions_unioned"
+  as
+    with unioned as (
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__pfd"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__doordash"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__ubereats"
+),
+
+cleaned as (
+    select
+        lower(userid) as userid,
+        lower(transactionid) as transactionid,
+        authorized_date,
+        transaction_date,
+        clean_merchant_name,
+        lower(merchant_name) as merchant_name,
+        transaction_name,
+        amount,
+        payment_channel,
+        category_level1,
+        category_level2,
+        category_level3,
+        num_levels,
+        primary_personal_finance_category,
+        detailed_personal_finance_category,
+        merchant_address,
+        merchant_city,
+        merchant_state,
+        merchant_zip
+)
+
+select * from cleaned
+
+[0m09:03:56.273408 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (execute): 09:00:34.669552 => 09:03:56.273207
+[0m09:03:56.273745 [debug] [Thread-1 (]: On model.local_delivery_service.transactions_unioned: Close
+[0m09:03:56.294523 [debug] [Thread-1 (]: Runtime Error in model transactions_unioned (models/staging/transactions_unioned.sql)
+  line 15:15: Column 'userid' cannot be resolved
+[0m09:03:56.295015 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a4feab53-a205-4fd1-b40a-528b19fc9117', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f847d3b52a0>]}
+[0m09:03:56.295584 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model cr_default_timoguin.transactions_unioned .. [[31mERROR[0m in 201.63s]
+[0m09:03:56.296101 [debug] [Thread-1 (]: Finished running node model.local_delivery_service.transactions_unioned
+[0m09:03:56.298441 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:03:56.298713 [debug] [MainThread]: Connection 'create_awsdatacatalog_cr_default_timoguin' was properly closed.
+[0m09:03:56.298932 [debug] [MainThread]: Connection 'model.local_delivery_service.transactions_unioned' was properly closed.
+[0m09:03:56.299793 [info ] [MainThread]: 
+[0m09:03:56.300138 [info ] [MainThread]: Finished running 1 view model in 0 hours 3 minutes and 26.46 seconds (206.46s).
+[0m09:03:56.300655 [debug] [MainThread]: Command end result
+[0m09:03:56.306557 [info ] [MainThread]: 
+[0m09:03:56.306934 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m09:03:56.307243 [info ] [MainThread]: 
+[0m09:03:56.307497 [error] [MainThread]:   Runtime Error in model transactions_unioned (models/staging/transactions_unioned.sql)
+  line 15:15: Column 'userid' cannot be resolved
+[0m09:03:56.307729 [info ] [MainThread]: 
+[0m09:03:56.308004 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m09:03:56.308687 [debug] [MainThread]: Resource report: {"command_name": "build", "command_wall_clock_time": 207.63998, "process_user_time": 3.343635, "process_kernel_time": 0.186302, "process_mem_max_rss": "175604", "process_in_blocks": "1392", "process_out_blocks": "2776", "command_success": false}
+[0m09:03:56.309140 [debug] [MainThread]: Command `dbt build` failed at 09:03:56.309036 after 207.64 seconds
+[0m09:03:56.309450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f84802ff580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8462e66380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f847e5ee0e0>]}
+[0m09:03:56.309745 [debug] [MainThread]: Flushing usage events
+[0m09:12:11.216225 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff806557640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff80468a050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff804689ff0>]}
+
+
+============================== 09:12:11.218396 | 614f1ea4-dfc8-416d-a8ea-3a1c585b3638 ==============================
+[0m09:12:11.218396 [info ] [MainThread]: Running with dbt=1.7.4
+[0m09:12:11.218770 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt build --log-level debug', 'send_anonymous_usage_stats': 'True'}
+[0m09:12:11.478020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '614f1ea4-dfc8-416d-a8ea-3a1c585b3638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff80468a140>]}
+[0m09:12:11.542902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '614f1ea4-dfc8-416d-a8ea-3a1c585b3638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8037d4070>]}
+[0m09:12:11.543569 [info ] [MainThread]: Registered adapter: athena=1.7.1
+[0m09:12:11.549634 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m09:12:11.551490 [debug] [MainThread]: Failed to load parsed file from disk at /home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/target/partial_parse.msgpack: bool is not allowed for map key when strict_map_key=True
+[0m09:12:11.551825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '614f1ea4-dfc8-416d-a8ea-3a1c585b3638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff80380dba0>]}
+[0m09:12:12.330638 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '614f1ea4-dfc8-416d-a8ea-3a1c585b3638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8032da8f0>]}
+[0m09:12:12.336449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '614f1ea4-dfc8-416d-a8ea-3a1c585b3638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8032da2c0>]}
+[0m09:12:12.336921 [info ] [MainThread]: Found 1 model, 4 sources, 0 exposures, 0 metrics, 423 macros, 0 groups, 0 semantic models
+[0m09:12:12.337965 [info ] [MainThread]: 
+[0m09:12:12.338574 [debug] [MainThread]: Acquiring new athena connection 'master'
+[0m09:12:12.339664 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog'
+[0m09:12:12.340138 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:12:13.728327 [debug] [ThreadPool]: On list_awsdatacatalog: Close
+[0m09:12:13.730107 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_awsdatacatalog, now list_awsdatacatalog_cr_default_timoguin)
+[0m09:12:13.730536 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:12:14.901881 [debug] [ThreadPool]: On list_awsdatacatalog_cr_default_timoguin: Close
+[0m09:12:14.902980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '614f1ea4-dfc8-416d-a8ea-3a1c585b3638', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8023996f0>]}
+[0m09:12:14.903809 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m09:12:14.904145 [info ] [MainThread]: 
+[0m09:12:14.908442 [debug] [Thread-1 (]: Began running node model.local_delivery_service.transactions_unioned
+[0m09:12:14.908932 [info ] [Thread-1 (]: 1 of 1 START sql table model cr_default_timoguin.transactions_unioned .......... [RUN]
+[0m09:12:14.909529 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_awsdatacatalog_cr_default_timoguin, now model.local_delivery_service.transactions_unioned)
+[0m09:12:14.909879 [debug] [Thread-1 (]: Began compiling node model.local_delivery_service.transactions_unioned
+[0m09:12:14.915719 [debug] [Thread-1 (]: Writing injected SQL for node "model.local_delivery_service.transactions_unioned"
+[0m09:12:14.916300 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (compile): 09:12:14.910069 => 09:12:14.916109
+[0m09:12:14.916688 [debug] [Thread-1 (]: Began executing node model.local_delivery_service.transactions_unioned
+[0m09:12:14.950474 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:12:15.880690 [debug] [Thread-1 (]: Athena adapter: S3 path does not exist
+[0m09:12:15.881457 [debug] [Thread-1 (]: Athena adapter: Running Athena query:
+-- /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "athena", "target_name": "dev", "node_id": "model.local_delivery_service.transactions_unioned"} */
+
+  
+    create table "awsdatacatalog"."cr_default_timoguin"."transactions_unioned"
+  with (
+    table_type='hive',
+    is_external=true,external_location='s3://athena-query-results-767398138063-us-east-1/tables/cr_default_timoguin/transactions_unioned/b150aafd-343d-4829-b243-cb403c857063',
+    format='parquet'
+  )
+  as
+    with unioned as (
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__pfd"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__doordash"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__ubereats"
+),
+
+cleaned as (
+    select
+        lower(userid) as userid,
+        lower(transactionid) as transactionid,
+        authorized_date,
+        transaction_date,
+        clean_merchant_name,
+        lower(merchant_name) as merchant_name,
+        transaction_name,
+        amount,
+        payment_channel,
+        category_level1,
+        category_level2,
+        category_level3,
+        num_levels,
+        primary_personal_finance_category,
+        detailed_personal_finance_category,
+        merchant_address,
+        merchant_city,
+        merchant_state,
+        merchant_zip
+)
+
+select * from cleaned
+
+  
+[0m09:12:16.266295 [debug] [Thread-1 (]: Athena adapter: Athena query ID 942d0eb3-9b12-4d6c-bb79-06590d13e55d
+[0m09:12:35.226477 [debug] [Thread-1 (]: Athena adapter: Athena query ID 7bf753e4-aabd-4371-a64a-e6e7f035062f
+[0m09:12:43.609863 [error] [MainThread]: CANCEL query model.local_delivery_service.transactions_unioned ................. [[31mCANCEL[0m]
+[0m09:12:57.040919 [debug] [Thread-1 (]: Athena adapter: Athena query ID df5e30fa-0ca0-4af8-9718-8617c424d0ed
+[0m09:13:32.973275 [debug] [Thread-1 (]: Athena adapter: Athena query ID d84c8d63-9cce-4cb2-9c11-ebc462220785
+[0m09:14:32.028933 [debug] [Thread-1 (]: Athena adapter: Athena query ID ed5446cf-c480-426e-a573-db7c81ffa03f
+[0m09:15:58.351186 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:15:58.351719 [debug] [MainThread]: Connection 'model.local_delivery_service.transactions_unioned' was left open.
+[0m09:15:58.352040 [debug] [MainThread]: On model.local_delivery_service.transactions_unioned: Close
+[0m09:15:58.352366 [info ] [MainThread]: 
+[0m09:15:58.352668 [info ] [MainThread]: Finished running  in 0 hours 3 minutes and 46.01 seconds (226.01s).
+[0m09:15:58.353068 [error] [MainThread]: Encountered an error:
+
+[0m09:15:58.367862 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 359, in execute_nodes
+    self.run_queue(pool)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 291, in run_queue
+    self.job_queue.join()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/graph/queue.py", line 198, in join
+    self.inner.join()
+  File "/usr/lib/python3.10/queue.py", line 90, in join
+    self.all_tasks_done.wait()
+  File "/usr/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 90, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 75, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 168, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 197, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 244, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 284, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/main.py", line 220, in build
+    results = task.run()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 474, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 435, in execute_with_hooks
+    res = self.execute_nodes()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 384, in execute_nodes
+    self._cancel_connections(pool)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 341, in _cancel_connections
+    pool.join()
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 669, in join
+    p.join()
+  File "/usr/lib/python3.10/threading.py", line 1096, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.10/threading.py", line 1116, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+KeyboardInterrupt
+
+[0m09:15:58.368799 [debug] [MainThread]: Resource report: {"command_name": "build", "command_wall_clock_time": 227.18372, "process_user_time": 3.233456, "process_kernel_time": 0.156773, "process_mem_max_rss": "160184", "process_in_blocks": "104", "process_out_blocks": "1888", "command_success": false}
+[0m09:15:58.369341 [debug] [MainThread]: Command `dbt build` failed at 09:15:58.369229 after 227.18 seconds
+[0m09:15:58.369722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff806557640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff8033092a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff80330a1d0>]}
+[0m09:15:58.370101 [debug] [MainThread]: Flushing usage events
+[0m09:16:17.542554 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f137faab640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f137db920e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f137db92080>]}
+
+
+============================== 09:16:17.544526 | ee5d61a5-211b-4698-9d18-e26dabb15afd ==============================
+[0m09:16:17.544526 [info ] [MainThread]: Running with dbt=1.7.4
+[0m09:16:17.544938 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt build --log-level debug', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:16:17.805297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ee5d61a5-211b-4698-9d18-e26dabb15afd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f137db921d0>]}
+[0m09:16:17.870817 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ee5d61a5-211b-4698-9d18-e26dabb15afd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f137dd4aa70>]}
+[0m09:16:17.871522 [info ] [MainThread]: Registered adapter: athena=1.7.1
+[0m09:16:17.877610 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m09:16:17.879557 [debug] [MainThread]: Failed to load parsed file from disk at /home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/target/partial_parse.msgpack: bool is not allowed for map key when strict_map_key=True
+[0m09:16:17.879890 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ee5d61a5-211b-4698-9d18-e26dabb15afd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f137cb0a140>]}
+[0m09:16:18.527035 [error] [MainThread]: Encountered an error:
+Compilation Error in model transactions_unioned (models/staging/transactions_unioned.sql)
+  unexpected '}', expected ')'
+    line 12
+      }}
+[0m09:16:18.527826 [debug] [MainThread]: Resource report: {"command_name": "build", "command_wall_clock_time": 1.0161967, "process_user_time": 2.23861, "process_kernel_time": 0.059962, "process_mem_max_rss": "120548", "process_in_blocks": "16", "process_out_blocks": "16", "command_success": false}
+[0m09:16:18.528325 [debug] [MainThread]: Command `dbt build` failed at 09:16:18.528217 after 1.02 seconds
+[0m09:16:18.528627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f137faab640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f137c84eb90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f137c84ec80>]}
+[0m09:16:18.528925 [debug] [MainThread]: Flushing usage events
+[0m09:16:48.010740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6f5e1a3640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6f5c2d6050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6f5c2d5ff0>]}
+
+
+============================== 09:16:48.012769 | 6ac29f25-fe48-4719-ad45-65b77e5bde21 ==============================
+[0m09:16:48.012769 [info ] [MainThread]: Running with dbt=1.7.4
+[0m09:16:48.013114 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt build --log-level debug', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m09:16:48.272878 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6ac29f25-fe48-4719-ad45-65b77e5bde21', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6f5c2d6140>]}
+[0m09:16:48.337614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6ac29f25-fe48-4719-ad45-65b77e5bde21', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6f5b420070>]}
+[0m09:16:48.338335 [info ] [MainThread]: Registered adapter: athena=1.7.1
+[0m09:16:48.344812 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m09:16:48.346803 [debug] [MainThread]: Failed to load parsed file from disk at /home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/target/partial_parse.msgpack: bool is not allowed for map key when strict_map_key=True
+[0m09:16:48.347191 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '6ac29f25-fe48-4719-ad45-65b77e5bde21', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6f5c291ae0>]}
+[0m09:16:49.120306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6ac29f25-fe48-4719-ad45-65b77e5bde21', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6f5adfe0b0>]}
+[0m09:16:49.125873 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6ac29f25-fe48-4719-ad45-65b77e5bde21', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6f5adff160>]}
+[0m09:16:49.126320 [info ] [MainThread]: Found 1 model, 4 sources, 0 exposures, 0 metrics, 423 macros, 0 groups, 0 semantic models
+[0m09:16:49.127403 [info ] [MainThread]: 
+[0m09:16:49.128020 [debug] [MainThread]: Acquiring new athena connection 'master'
+[0m09:16:49.128955 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog'
+[0m09:16:49.129473 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:16:50.267240 [debug] [ThreadPool]: On list_awsdatacatalog: Close
+[0m09:16:50.269110 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_awsdatacatalog, now list_awsdatacatalog_cr_default_timoguin)
+[0m09:16:50.269661 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:16:51.466795 [debug] [ThreadPool]: On list_awsdatacatalog_cr_default_timoguin: Close
+[0m09:16:51.467927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6ac29f25-fe48-4719-ad45-65b77e5bde21', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6f5ae40160>]}
+[0m09:16:51.468655 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m09:16:51.468973 [info ] [MainThread]: 
+[0m09:16:51.473656 [debug] [Thread-1 (]: Began running node model.local_delivery_service.transactions_unioned
+[0m09:16:51.474168 [info ] [Thread-1 (]: 1 of 1 START sql view model cr_default_timoguin.transactions_unioned ........... [RUN]
+[0m09:16:51.474759 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_awsdatacatalog_cr_default_timoguin, now model.local_delivery_service.transactions_unioned)
+[0m09:16:51.475158 [debug] [Thread-1 (]: Began compiling node model.local_delivery_service.transactions_unioned
+[0m09:16:51.481564 [debug] [Thread-1 (]: Writing injected SQL for node "model.local_delivery_service.transactions_unioned"
+[0m09:16:51.482166 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (compile): 09:16:51.475358 => 09:16:51.481971
+[0m09:16:51.482516 [debug] [Thread-1 (]: Began executing node model.local_delivery_service.transactions_unioned
+[0m09:16:51.499909 [debug] [Thread-1 (]: Writing runtime sql for node "model.local_delivery_service.transactions_unioned"
+[0m09:16:51.500519 [debug] [Thread-1 (]: Using athena connection "model.local_delivery_service.transactions_unioned"
+[0m09:16:51.500876 [debug] [Thread-1 (]: On model.local_delivery_service.transactions_unioned: -- /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "athena", "target_name": "dev", "node_id": "model.local_delivery_service.transactions_unioned"} */
+create or replace view
+    "awsdatacatalog"."cr_default_timoguin"."transactions_unioned"
+  as
+    
+
+with unioned as (
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__pfd"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__doordash"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__ubereats"
+),
+
+cleaned as (
+    select
+        lower(userid) as userid,
+        lower(transactionid) as transactionid,
+        authorized_date,
+        transaction_date,
+        clean_merchant_name,
+        lower(merchant_name) as merchant_name,
+        transaction_name,
+        amount,
+        payment_channel,
+        category_level1,
+        category_level2,
+        category_level3,
+        num_levels,
+        primary_personal_finance_category,
+        detailed_personal_finance_category,
+        merchant_address,
+        merchant_city,
+        merchant_state,
+        merchant_zip
+)
+
+select * from cleaned
+
+[0m09:16:51.501190 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:16:52.561462 [debug] [Thread-1 (]: Athena adapter: Athena query ID 9e8d625c-5335-4199-9520-44d3e0420714
+[0m09:17:00.939789 [debug] [Thread-1 (]: Athena adapter: Athena query ID 442e933f-216d-4b44-a319-329f1c5454e8
+[0m09:17:15.309497 [debug] [Thread-1 (]: Athena adapter: Athena query ID 56a0231d-9523-48ea-8b5a-d16bb3e700bf
+[0m09:17:41.642153 [debug] [Thread-1 (]: Athena adapter: Athena query ID 98821a0d-a0ba-474f-94bb-079c5c36fddb
+[0m09:18:32.160999 [debug] [Thread-1 (]: Athena adapter: Athena query ID f177f407-e7ef-4d0e-aa5b-ea99604694ad
+[0m09:20:10.548019 [debug] [Thread-1 (]: Athena adapter: Athena query ID b3c120d8-d13f-44ef-ad9b-98484b1a3d34
+[0m09:20:12.754162 [debug] [Thread-1 (]: Athena adapter: Error running SQL: -- /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "athena", "target_name": "dev", "node_id": "model.local_delivery_service.transactions_unioned"} */
+create or replace view
+    "awsdatacatalog"."cr_default_timoguin"."transactions_unioned"
+  as
+    
+
+with unioned as (
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__pfd"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__doordash"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__ubereats"
+),
+
+cleaned as (
+    select
+        lower(userid) as userid,
+        lower(transactionid) as transactionid,
+        authorized_date,
+        transaction_date,
+        clean_merchant_name,
+        lower(merchant_name) as merchant_name,
+        transaction_name,
+        amount,
+        payment_channel,
+        category_level1,
+        category_level2,
+        category_level3,
+        num_levels,
+        primary_personal_finance_category,
+        detailed_personal_finance_category,
+        merchant_address,
+        merchant_city,
+        merchant_state,
+        merchant_zip
+)
+
+select * from cleaned
+
+[0m09:20:12.754914 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (execute): 09:16:51.482706 => 09:20:12.754694
+[0m09:20:12.755341 [debug] [Thread-1 (]: On model.local_delivery_service.transactions_unioned: Close
+[0m09:20:12.757399 [debug] [Thread-1 (]: Runtime Error in model transactions_unioned (models/staging/transactions_unioned.sql)
+  line 17:15: Column 'userid' cannot be resolved
+[0m09:20:12.757919 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6ac29f25-fe48-4719-ad45-65b77e5bde21', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6f5ae347f0>]}
+[0m09:20:12.758530 [error] [Thread-1 (]: 1 of 1 ERROR creating sql view model cr_default_timoguin.transactions_unioned .. [[31mERROR[0m in 201.28s]
+[0m09:20:12.759045 [debug] [Thread-1 (]: Finished running node model.local_delivery_service.transactions_unioned
+[0m09:20:12.761475 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:20:12.761812 [debug] [MainThread]: Connection 'model.local_delivery_service.transactions_unioned' was properly closed.
+[0m09:20:12.762166 [info ] [MainThread]: 
+[0m09:20:12.762559 [info ] [MainThread]: Finished running 1 view model in 0 hours 3 minutes and 23.63 seconds (203.63s).
+[0m09:20:12.763107 [debug] [MainThread]: Command end result
+[0m09:20:12.769004 [info ] [MainThread]: 
+[0m09:20:12.769383 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m09:20:12.769673 [info ] [MainThread]: 
+[0m09:20:12.769940 [error] [MainThread]:   Runtime Error in model transactions_unioned (models/staging/transactions_unioned.sql)
+  line 17:15: Column 'userid' cannot be resolved
+[0m09:20:12.770215 [info ] [MainThread]: 
+[0m09:20:12.770492 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m09:20:12.771297 [debug] [MainThread]: Resource report: {"command_name": "build", "command_wall_clock_time": 204.79152, "process_user_time": 3.195494, "process_kernel_time": 0.110535, "process_mem_max_rss": "161412", "process_out_blocks": "2792", "command_success": false, "process_in_blocks": "0"}
+[0m09:20:12.771841 [debug] [MainThread]: Command `dbt build` failed at 09:20:12.771730 after 204.79 seconds
+[0m09:20:12.772207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6f5e1a3640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6f5b443160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6f5af80fa0>]}
+[0m09:20:12.772548 [debug] [MainThread]: Flushing usage events
+[0m09:26:16.921152 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fd8f03640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fd7042080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fd7042020>]}
+
+
+============================== 09:26:16.923133 | 4bfead82-c524-45f6-83c7-5f54f98c07c7 ==============================
+[0m09:26:16.923133 [info ] [MainThread]: Running with dbt=1.7.4
+[0m09:26:16.923500 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'fail_fast': 'False', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt build --log-level debug', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m09:26:17.185020 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4bfead82-c524-45f6-83c7-5f54f98c07c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fd7042170>]}
+[0m09:26:17.250153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4bfead82-c524-45f6-83c7-5f54f98c07c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fd70026b0>]}
+[0m09:26:17.250847 [info ] [MainThread]: Registered adapter: athena=1.7.1
+[0m09:26:17.256781 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m09:26:17.258739 [debug] [MainThread]: Failed to load parsed file from disk at /home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/target/partial_parse.msgpack: bool is not allowed for map key when strict_map_key=True
+[0m09:26:17.259085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4bfead82-c524-45f6-83c7-5f54f98c07c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fd618f100>]}
+[0m09:26:18.042081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4bfead82-c524-45f6-83c7-5f54f98c07c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fd4b3cd00>]}
+[0m09:26:18.048353 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4bfead82-c524-45f6-83c7-5f54f98c07c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fd4b3f910>]}
+[0m09:26:18.048768 [info ] [MainThread]: Found 1 model, 4 sources, 0 exposures, 0 metrics, 423 macros, 0 groups, 0 semantic models
+[0m09:26:18.049797 [info ] [MainThread]: 
+[0m09:26:18.050387 [debug] [MainThread]: Acquiring new athena connection 'master'
+[0m09:26:18.051308 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog'
+[0m09:26:18.051795 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:26:19.306444 [debug] [ThreadPool]: On list_awsdatacatalog: Close
+[0m09:26:19.308174 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_awsdatacatalog, now list_awsdatacatalog_cr_default_timoguin)
+[0m09:26:19.308788 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:26:20.534163 [debug] [ThreadPool]: On list_awsdatacatalog_cr_default_timoguin: Close
+[0m09:26:20.535279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4bfead82-c524-45f6-83c7-5f54f98c07c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fd4b7fcd0>]}
+[0m09:26:20.536095 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m09:26:20.536465 [info ] [MainThread]: 
+[0m09:26:20.543839 [debug] [Thread-1 (]: Began running node model.local_delivery_service.transactions_unioned
+[0m09:26:20.544378 [info ] [Thread-1 (]: 1 of 1 START sql table model cr_default_timoguin.transactions_unioned .......... [RUN]
+[0m09:26:20.545028 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_awsdatacatalog_cr_default_timoguin, now model.local_delivery_service.transactions_unioned)
+[0m09:26:20.545382 [debug] [Thread-1 (]: Began compiling node model.local_delivery_service.transactions_unioned
+[0m09:26:20.551641 [debug] [Thread-1 (]: Writing injected SQL for node "model.local_delivery_service.transactions_unioned"
+[0m09:26:20.552275 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (compile): 09:26:20.545595 => 09:26:20.552078
+[0m09:26:20.552619 [debug] [Thread-1 (]: Began executing node model.local_delivery_service.transactions_unioned
+[0m09:26:20.583686 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:26:21.576094 [debug] [Thread-1 (]: Athena adapter: S3 path does not exist
+[0m09:26:21.576911 [debug] [Thread-1 (]: Athena adapter: Running Athena query:
+
+  
+    create table "awsdatacatalog"."cr_default_timoguin"."transactions_unioned"
+  with (
+    table_type='iceberg',
+    is_external=false,location='s3://athena-query-results-767398138063-us-east-1/tables/cr_default_timoguin/transactions_unioned/e5388f2b-e6cc-49e3-afb6-ac468d2616cf',
+    partitioning=ARRAY['day(transaction_date)'],
+    format='parquet',
+    vacuum_max_snapshot_age_seconds=2592000,
+    optimize_rewrite_delete_file_threshold=2,
+    optimize_rewrite_data_file_threshold=5,
+    vacuum_min_snapshots_to_keep=10
+  )
+  as
+    
+
+with unioned as (
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__pfd"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__doordash"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__ubereats"
+),
+
+cleaned as (
+    select
+        lower(userid) as userid,
+        lower(transactionid) as transactionid,
+        authorized_date,
+        transaction_date,
+        clean_merchant_name,
+        lower(merchant_name) as merchant_name,
+        transaction_name,
+        amount,
+        payment_channel,
+        category_level1,
+        category_level2,
+        category_level3,
+        num_levels,
+        primary_personal_finance_category,
+        detailed_personal_finance_category,
+        merchant_address,
+        merchant_city,
+        merchant_state,
+        merchant_zip
+)
+
+select * from cleaned
+
+  
+[0m09:26:21.929602 [debug] [Thread-1 (]: Athena adapter: Athena query ID 650fe45b-2a96-4de8-b815-435d03bca6dc
+[0m09:26:37.692964 [debug] [Thread-1 (]: Athena adapter: Athena query ID 4e2e8ea6-bef1-4209-9be9-bd565faee55b
+[0m09:26:59.622141 [debug] [Thread-1 (]: Athena adapter: Athena query ID fcfd65bc-44d8-4bf1-afd5-d68e15a39bdc
+[0m09:27:33.452629 [debug] [Thread-1 (]: Athena adapter: Athena query ID 6ce19ee1-1894-4df7-9b15-21f1675bba3f
+[0m09:28:30.427696 [debug] [Thread-1 (]: Athena adapter: Athena query ID 8c39f5ee-b02a-49db-9fa9-d0dc8a4c6886
+[0m09:30:16.378716 [debug] [Thread-1 (]: Athena adapter: Athena query ID e2d7bdcc-65b3-4a6d-ae30-a6ef11574e93
+[0m09:30:25.968149 [debug] [Thread-1 (]: Athena adapter: CAUGHT EXCEPTION: COLUMN_NOT_FOUND: line 26:12: Column 'userid' cannot be resolved or requester is not authorized to access requested resources. You may need to manually clean the data at location 's3://athena-query-results-767398138063-us-east-1/tables/e2d7bdcc-65b3-4a6d-ae30-a6ef11574e93' before retrying. Athena will not delete data in your account.
+[0m09:30:25.968960 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (execute): 09:26:20.552843 => 09:30:25.968724
+[0m09:30:25.969385 [debug] [Thread-1 (]: On model.local_delivery_service.transactions_unioned: Close
+[0m09:30:25.970016 [error] [Thread-1 (]: [31mUnhandled error while executing [0m
+COLUMN_NOT_FOUND: line 26:12: Column 'userid' cannot be resolved or requester is not authorized to access requested resources. You may need to manually clean the data at location 's3://athena-query-results-767398138063-us-east-1/tables/e2d7bdcc-65b3-4a6d-ae30-a6ef11574e93' before retrying. Athena will not delete data in your account.
+[0m09:30:25.971181 [debug] [Thread-1 (]: Traceback (most recent call last):
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/base.py", line 372, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/base.py", line 323, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/base.py", line 419, in run
+    return self.execute(compiled_node, manifest)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/run.py", line 291, in execute
+    result = MacroGenerator(
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/clients/jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/clients/jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 133, in macro
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/clients/jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/clients/jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 42, in macro
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/impl.py", line 1256, in run_query_with_partitions_limit_catching
+    raise e
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/impl.py", line 1252, in run_query_with_partitions_limit_catching
+    cursor = self._run_query(sql, catch_partitions_limit=True)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/impl.py", line 1333, in _run_query
+    raise e
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/impl.py", line 1330, in _run_query
+    cursor.execute(query, catch_partitions_limit=catch_partitions_limit)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/connections.py", line 200, in execute
+    return retry(inner)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/connections.py", line 182, in inner
+    raise OperationalError(query_execution.state_change_reason)
+pyathena.error.OperationalError: COLUMN_NOT_FOUND: line 26:12: Column 'userid' cannot be resolved or requester is not authorized to access requested resources. You may need to manually clean the data at location 's3://athena-query-results-767398138063-us-east-1/tables/e2d7bdcc-65b3-4a6d-ae30-a6ef11574e93' before retrying. Athena will not delete data in your account.
+
+[0m09:30:25.971863 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4bfead82-c524-45f6-83c7-5f54f98c07c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fd4b7be20>]}
+[0m09:30:25.972562 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model cr_default_timoguin.transactions_unioned . [[31mERROR[0m in 245.43s]
+[0m09:30:25.973069 [debug] [Thread-1 (]: Finished running node model.local_delivery_service.transactions_unioned
+[0m09:30:25.975667 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:30:25.976007 [debug] [MainThread]: Connection 'model.local_delivery_service.transactions_unioned' was properly closed.
+[0m09:30:25.976291 [info ] [MainThread]: 
+[0m09:30:25.976590 [info ] [MainThread]: Finished running 1 table model in 0 hours 4 minutes and 7.93 seconds (247.93s).
+[0m09:30:25.977246 [debug] [MainThread]: Command end result
+[0m09:30:25.983377 [info ] [MainThread]: 
+[0m09:30:25.983741 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m09:30:25.983995 [info ] [MainThread]: 
+[0m09:30:25.984282 [error] [MainThread]:   COLUMN_NOT_FOUND: line 26:12: Column 'userid' cannot be resolved or requester is not authorized to access requested resources. You may need to manually clean the data at location 's3://athena-query-results-767398138063-us-east-1/tables/e2d7bdcc-65b3-4a6d-ae30-a6ef11574e93' before retrying. Athena will not delete data in your account.
+[0m09:30:25.984555 [info ] [MainThread]: 
+[0m09:30:25.984823 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m09:30:25.985571 [debug] [MainThread]: Resource report: {"command_name": "build", "command_wall_clock_time": 249.0957, "process_user_time": 3.283459, "process_kernel_time": 0.184573, "process_mem_max_rss": "165524", "process_out_blocks": "2776", "command_success": false, "process_in_blocks": "0"}
+[0m09:30:25.986120 [debug] [MainThread]: Command `dbt build` failed at 09:30:25.986012 after 249.10 seconds
+[0m09:30:25.986503 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fd8f03640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fd6035300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f6fd4ba7b20>]}
+[0m09:30:25.986845 [debug] [MainThread]: Flushing usage events
+[0m09:34:06.309917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb59c67580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb57f55ff0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb57f55f90>]}
+
+
+============================== 09:34:06.311854 | 7a373358-f2cc-4588-8284-64dea83aade8 ==============================
+[0m09:34:06.311854 [info ] [MainThread]: Running with dbt=1.7.4
+[0m09:34:06.312244 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt build --log-level debug', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:34:06.578192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7a373358-f2cc-4588-8284-64dea83aade8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb57f560e0>]}
+[0m09:34:06.643320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7a373358-f2cc-4588-8284-64dea83aade8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb570a0a30>]}
+[0m09:34:06.644038 [info ] [MainThread]: Registered adapter: athena=1.7.1
+[0m09:34:06.650154 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m09:34:06.652017 [debug] [MainThread]: Failed to load parsed file from disk at /home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/target/partial_parse.msgpack: bool is not allowed for map key when strict_map_key=True
+[0m09:34:06.652348 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7a373358-f2cc-4588-8284-64dea83aade8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb56f56710>]}
+[0m09:34:07.422993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7a373358-f2cc-4588-8284-64dea83aade8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb56b34310>]}
+[0m09:34:07.428845 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7a373358-f2cc-4588-8284-64dea83aade8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb56b365c0>]}
+[0m09:34:07.429343 [info ] [MainThread]: Found 1 model, 4 sources, 0 exposures, 0 metrics, 423 macros, 0 groups, 0 semantic models
+[0m09:34:07.430463 [info ] [MainThread]: 
+[0m09:34:07.431103 [debug] [MainThread]: Acquiring new athena connection 'master'
+[0m09:34:07.432116 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog'
+[0m09:34:07.432536 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:34:08.585774 [debug] [ThreadPool]: On list_awsdatacatalog: Close
+[0m09:34:08.587187 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_awsdatacatalog, now create_awsdatacatalog_cr_default_timoguin)
+[0m09:34:08.587879 [debug] [ThreadPool]: Creating schema "database: "awsdatacatalog"
+schema: "cr_default_timoguin"
+"
+[0m09:34:08.594823 [debug] [ThreadPool]: Using athena connection "create_awsdatacatalog_cr_default_timoguin"
+[0m09:34:08.595183 [debug] [ThreadPool]: On create_awsdatacatalog_cr_default_timoguin: -- /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "athena", "target_name": "dev", "connection_name": "create_awsdatacatalog_cr_default_timoguin"} */
+create schema if not exists `awsdatacatalog`.`cr_default_timoguin`
+  
+[0m09:34:08.595474 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:34:09.665650 [debug] [ThreadPool]: Athena adapter: Athena query ID c37b714c-9140-4eb2-af9d-0993dc7b071e
+[0m09:34:11.071753 [debug] [ThreadPool]: SQL status: OK -1 in 2.0 seconds
+[0m09:34:11.073377 [debug] [ThreadPool]: Athena adapter: Lakeformation is disabled for "awsdatacatalog"."cr_default_timoguin"
+[0m09:34:11.073901 [debug] [ThreadPool]: On create_awsdatacatalog_cr_default_timoguin: Close
+[0m09:34:11.076453 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_awsdatacatalog_cr_default_timoguin, now list_awsdatacatalog_cr_default_timoguin)
+[0m09:34:11.076835 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:34:12.335359 [debug] [ThreadPool]: On list_awsdatacatalog_cr_default_timoguin: Close
+[0m09:34:12.336468 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7a373358-f2cc-4588-8284-64dea83aade8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb5bfe1750>]}
+[0m09:34:12.337285 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m09:34:12.337649 [info ] [MainThread]: 
+[0m09:34:12.340426 [debug] [Thread-1 (]: Began running node model.local_delivery_service.transactions_unioned
+[0m09:34:12.340956 [info ] [Thread-1 (]: 1 of 1 START sql table model cr_default_timoguin.transactions_unioned .......... [RUN]
+[0m09:34:12.341582 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_awsdatacatalog_cr_default_timoguin, now model.local_delivery_service.transactions_unioned)
+[0m09:34:12.341953 [debug] [Thread-1 (]: Began compiling node model.local_delivery_service.transactions_unioned
+[0m09:34:12.348473 [debug] [Thread-1 (]: Writing injected SQL for node "model.local_delivery_service.transactions_unioned"
+[0m09:34:12.349103 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (compile): 09:34:12.342176 => 09:34:12.348910
+[0m09:34:12.349449 [debug] [Thread-1 (]: Began executing node model.local_delivery_service.transactions_unioned
+[0m09:34:12.381095 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:34:13.553674 [debug] [Thread-1 (]: Athena adapter: S3 path does not exist
+[0m09:34:13.554505 [debug] [Thread-1 (]: Athena adapter: Running Athena query:
+
+  
+    create table "awsdatacatalog"."cr_default_timoguin"."transactions_unioned"
+  with (
+    table_type='iceberg',
+    is_external=false,location='s3://athena-query-results-767398138063-us-east-2/tables/cr_default_timoguin/transactions_unioned/dabe41fb-ac5e-4b31-b2b2-e31306e37bce',
+    partitioning=ARRAY['day(transaction_date)'],
+    format='parquet',
+    optimize_rewrite_data_file_threshold=5,
+    optimize_rewrite_delete_file_threshold=2,
+    vacuum_max_snapshot_age_seconds=2592000,
+    vacuum_min_snapshots_to_keep=10
+  )
+  as
+    
+
+with unioned as (
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__pfd"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__doordash"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__ubereats"
+),
+
+cleaned as (
+    select
+        lower(userid) as userid,
+        lower(transactionid) as transactionid,
+        authorized_date,
+        transaction_date,
+        clean_merchant_name,
+        lower(merchant_name) as merchant_name,
+        transaction_name,
+        amount,
+        payment_channel,
+        category_level1,
+        category_level2,
+        category_level3,
+        num_levels,
+        primary_personal_finance_category,
+        detailed_personal_finance_category,
+        merchant_address,
+        merchant_city,
+        merchant_state,
+        merchant_zip
+)
+
+select * from cleaned
+
+  
+[0m09:34:13.913066 [debug] [Thread-1 (]: Athena adapter: Athena query ID 7c55a8ff-74ea-4242-9331-90cf1e18155a
+[0m09:34:27.638683 [debug] [Thread-1 (]: Athena adapter: Athena query ID d8f24875-be08-412d-94ff-00739fa0dd6c
+[0m09:34:46.280531 [debug] [Thread-1 (]: Athena adapter: Athena query ID c50aec1c-7c2a-4c5d-8c92-9e2d47867001
+[0m09:35:10.897266 [error] [MainThread]: CANCEL query model.local_delivery_service.transactions_unioned ................. [[31mCANCEL[0m]
+[0m09:35:15.097960 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:35:15.098429 [debug] [MainThread]: Connection 'model.local_delivery_service.transactions_unioned' was left open.
+[0m09:35:15.098763 [debug] [MainThread]: On model.local_delivery_service.transactions_unioned: Close
+[0m09:35:15.099074 [info ] [MainThread]: 
+[0m09:35:15.099363 [info ] [MainThread]: Finished running  in 0 hours 1 minutes and 7.67 seconds (67.67s).
+[0m09:35:15.099718 [error] [MainThread]: Encountered an error:
+
+[0m09:35:15.100793 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 359, in execute_nodes
+    self.run_queue(pool)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 291, in run_queue
+    self.job_queue.join()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/graph/queue.py", line 198, in join
+    self.inner.join()
+  File "/usr/lib/python3.10/queue.py", line 90, in join
+    self.all_tasks_done.wait()
+  File "/usr/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 90, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 75, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 168, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 197, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 244, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/requires.py", line 284, in wrapper
+    return func(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/cli/main.py", line 220, in build
+    results = task.run()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 474, in run
+    result = self.execute_with_hooks(selected_uids)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 435, in execute_with_hooks
+    res = self.execute_nodes()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 384, in execute_nodes
+    self._cancel_connections(pool)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/runnable.py", line 341, in _cancel_connections
+    pool.join()
+  File "/usr/lib/python3.10/multiprocessing/pool.py", line 669, in join
+    p.join()
+  File "/usr/lib/python3.10/threading.py", line 1096, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.10/threading.py", line 1116, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+KeyboardInterrupt
+
+[0m09:35:15.101688 [debug] [MainThread]: Resource report: {"command_name": "build", "command_wall_clock_time": 68.823524, "process_user_time": 3.33982, "process_kernel_time": 0.139992, "process_mem_max_rss": "162252", "process_out_blocks": "1864", "command_success": false, "process_in_blocks": "0"}
+[0m09:35:15.102226 [debug] [MainThread]: Command `dbt build` failed at 09:35:15.102113 after 68.82 seconds
+[0m09:35:15.102576 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb59c67580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb56f9f2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ffb56ae4880>]}
+[0m09:35:15.102950 [debug] [MainThread]: Flushing usage events
+[0m09:35:21.527004 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe573153640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe57127e020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe57127dfc0>]}
+
+
+============================== 09:35:21.529077 | 4d65e03d-99f0-48aa-97ad-72a737bc8325 ==============================
+[0m09:35:21.529077 [info ] [MainThread]: Running with dbt=1.7.4
+[0m09:35:21.529494 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt build --log-level debug', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m09:35:21.799752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4d65e03d-99f0-48aa-97ad-72a737bc8325', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe57127e110>]}
+[0m09:35:21.878628 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4d65e03d-99f0-48aa-97ad-72a737bc8325', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5703a4fd0>]}
+[0m09:35:21.879456 [info ] [MainThread]: Registered adapter: athena=1.7.1
+[0m09:35:21.886391 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m09:35:21.888548 [debug] [MainThread]: Failed to load parsed file from disk at /home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/target/partial_parse.msgpack: bool is not allowed for map key when strict_map_key=True
+[0m09:35:21.888933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '4d65e03d-99f0-48aa-97ad-72a737bc8325', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5701dfcd0>]}
+[0m09:35:22.678708 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4d65e03d-99f0-48aa-97ad-72a737bc8325', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe56fe384c0>]}
+[0m09:35:22.684590 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4d65e03d-99f0-48aa-97ad-72a737bc8325', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe56fe38e20>]}
+[0m09:35:22.685065 [info ] [MainThread]: Found 1 model, 4 sources, 0 exposures, 0 metrics, 423 macros, 0 groups, 0 semantic models
+[0m09:35:22.686105 [info ] [MainThread]: 
+[0m09:35:22.686699 [debug] [MainThread]: Acquiring new athena connection 'master'
+[0m09:35:22.687613 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog'
+[0m09:35:22.688317 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:35:23.859864 [debug] [ThreadPool]: On list_awsdatacatalog: Close
+[0m09:35:23.861552 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_awsdatacatalog, now list_awsdatacatalog_cr_default_timoguin)
+[0m09:35:23.862077 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:35:25.031566 [debug] [ThreadPool]: On list_awsdatacatalog_cr_default_timoguin: Close
+[0m09:35:25.032712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4d65e03d-99f0-48aa-97ad-72a737bc8325', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe56ff04c70>]}
+[0m09:35:25.033479 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m09:35:25.033816 [info ] [MainThread]: 
+[0m09:35:25.037202 [debug] [Thread-1 (]: Began running node model.local_delivery_service.transactions_unioned
+[0m09:35:25.037761 [info ] [Thread-1 (]: 1 of 1 START sql table model cr_default_timoguin.transactions_unioned .......... [RUN]
+[0m09:35:25.038353 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_awsdatacatalog_cr_default_timoguin, now model.local_delivery_service.transactions_unioned)
+[0m09:35:25.038711 [debug] [Thread-1 (]: Began compiling node model.local_delivery_service.transactions_unioned
+[0m09:35:25.045034 [debug] [Thread-1 (]: Writing injected SQL for node "model.local_delivery_service.transactions_unioned"
+[0m09:35:25.045634 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (compile): 09:35:25.038927 => 09:35:25.045439
+[0m09:35:25.045991 [debug] [Thread-1 (]: Began executing node model.local_delivery_service.transactions_unioned
+[0m09:35:25.077886 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:35:26.006552 [debug] [Thread-1 (]: Athena adapter: S3 path does not exist
+[0m09:35:26.007410 [debug] [Thread-1 (]: Athena adapter: Running Athena query:
+
+  
+    create table "awsdatacatalog"."cr_default_timoguin"."transactions_unioned"
+  with (
+    table_type='iceberg',
+    is_external=false,location='s3://athena-query-results-767398138063-us-east-1/tables/cr_default_timoguin/transactions_unioned/40deffca-31a4-4eeb-867b-db7e03c46e17',
+    partitioning=ARRAY['day(transaction_date)'],
+    format='parquet',
+    optimize_rewrite_delete_file_threshold=2,
+    vacuum_min_snapshots_to_keep=10,
+    vacuum_max_snapshot_age_seconds=2592000,
+    optimize_rewrite_data_file_threshold=5
+  )
+  as
+    
+
+with unioned as (
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__pfd"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__doordash"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__ubereats"
+),
+
+cleaned as (
+    select
+        lower(userid) as userid,
+        lower(transactionid) as transactionid,
+        authorized_date,
+        transaction_date,
+        clean_merchant_name,
+        lower(merchant_name) as merchant_name,
+        transaction_name,
+        amount,
+        payment_channel,
+        category_level1,
+        category_level2,
+        category_level3,
+        num_levels,
+        primary_personal_finance_category,
+        detailed_personal_finance_category,
+        merchant_address,
+        merchant_city,
+        merchant_state,
+        merchant_zip
+)
+
+select * from cleaned
+
+  
+[0m09:35:26.397341 [debug] [Thread-1 (]: Athena adapter: Athena query ID 30cdd61d-ee42-4f78-8ca0-558d1b0e46cc
+[0m09:35:42.177815 [debug] [Thread-1 (]: Athena adapter: Athena query ID fc682d44-6f2c-4eec-99df-442e28077628
+[0m09:36:02.920855 [debug] [Thread-1 (]: Athena adapter: Athena query ID 00264bd9-1788-42d6-8da1-0a0a5256ab42
+[0m09:36:35.626934 [debug] [Thread-1 (]: Athena adapter: Athena query ID e64d6a9b-63c0-4b67-88d1-51e13e536fb6
+[0m09:37:33.710785 [debug] [Thread-1 (]: Athena adapter: Athena query ID d68aee5f-d414-4475-af4e-b572b22c81d8
+[0m09:39:19.687672 [debug] [Thread-1 (]: Athena adapter: Athena query ID 851c4e07-38e9-4373-ab55-4e36f78b0f8b
+[0m09:39:29.287166 [debug] [Thread-1 (]: Athena adapter: CAUGHT EXCEPTION: COLUMN_NOT_FOUND: line 26:12: Column 'userid' cannot be resolved or requester is not authorized to access requested resources. You may need to manually clean the data at location 's3://athena-query-results-767398138063-us-east-1/tables/851c4e07-38e9-4373-ab55-4e36f78b0f8b' before retrying. Athena will not delete data in your account.
+[0m09:39:29.287999 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (execute): 09:35:25.046209 => 09:39:29.287736
+[0m09:39:29.288448 [debug] [Thread-1 (]: On model.local_delivery_service.transactions_unioned: Close
+[0m09:39:29.289167 [error] [Thread-1 (]: [31mUnhandled error while executing [0m
+COLUMN_NOT_FOUND: line 26:12: Column 'userid' cannot be resolved or requester is not authorized to access requested resources. You may need to manually clean the data at location 's3://athena-query-results-767398138063-us-east-1/tables/851c4e07-38e9-4373-ab55-4e36f78b0f8b' before retrying. Athena will not delete data in your account.
+[0m09:39:29.291260 [debug] [Thread-1 (]: Traceback (most recent call last):
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/base.py", line 372, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/base.py", line 323, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/base.py", line 419, in run
+    return self.execute(compiled_node, manifest)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/run.py", line 291, in execute
+    result = MacroGenerator(
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/clients/jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/clients/jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 133, in macro
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/clients/jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/clients/jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 42, in macro
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/impl.py", line 1256, in run_query_with_partitions_limit_catching
+    raise e
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/impl.py", line 1252, in run_query_with_partitions_limit_catching
+    cursor = self._run_query(sql, catch_partitions_limit=True)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/impl.py", line 1333, in _run_query
+    raise e
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/impl.py", line 1330, in _run_query
+    cursor.execute(query, catch_partitions_limit=catch_partitions_limit)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/connections.py", line 200, in execute
+    return retry(inner)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/connections.py", line 182, in inner
+    raise OperationalError(query_execution.state_change_reason)
+pyathena.error.OperationalError: COLUMN_NOT_FOUND: line 26:12: Column 'userid' cannot be resolved or requester is not authorized to access requested resources. You may need to manually clean the data at location 's3://athena-query-results-767398138063-us-east-1/tables/851c4e07-38e9-4373-ab55-4e36f78b0f8b' before retrying. Athena will not delete data in your account.
+
+[0m09:39:29.291947 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4d65e03d-99f0-48aa-97ad-72a737bc8325', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe56edb6c80>]}
+[0m09:39:29.292647 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model cr_default_timoguin.transactions_unioned . [[31mERROR[0m in 244.25s]
+[0m09:39:29.293144 [debug] [Thread-1 (]: Finished running node model.local_delivery_service.transactions_unioned
+[0m09:39:29.295995 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:39:29.296348 [debug] [MainThread]: Connection 'model.local_delivery_service.transactions_unioned' was properly closed.
+[0m09:39:29.296698 [info ] [MainThread]: 
+[0m09:39:29.297013 [info ] [MainThread]: Finished running 1 table model in 0 hours 4 minutes and 6.61 seconds (246.61s).
+[0m09:39:29.297598 [debug] [MainThread]: Command end result
+[0m09:39:29.304473 [info ] [MainThread]: 
+[0m09:39:29.304851 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m09:39:29.305134 [info ] [MainThread]: 
+[0m09:39:29.305410 [error] [MainThread]:   COLUMN_NOT_FOUND: line 26:12: Column 'userid' cannot be resolved or requester is not authorized to access requested resources. You may need to manually clean the data at location 's3://athena-query-results-767398138063-us-east-1/tables/851c4e07-38e9-4373-ab55-4e36f78b0f8b' before retrying. Athena will not delete data in your account.
+[0m09:39:29.305694 [info ] [MainThread]: 
+[0m09:39:29.305973 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m09:39:29.306777 [debug] [MainThread]: Resource report: {"command_name": "build", "command_wall_clock_time": 247.81145, "process_user_time": 3.444647, "process_kernel_time": 0.101612, "process_mem_max_rss": "159876", "process_out_blocks": "2776", "command_success": false, "process_in_blocks": "0"}
+[0m09:39:29.307314 [debug] [MainThread]: Command `dbt build` failed at 09:39:29.307193 after 247.81 seconds
+[0m09:39:29.307707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe573153640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe5703a4fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fe57042a800>]}
+[0m09:39:29.308052 [debug] [MainThread]: Flushing usage events
+[0m09:40:01.259027 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea5b29b640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea593c5ea0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea593c5e40>]}
+
+
+============================== 09:40:01.260924 | b2097c04-1b4a-42b3-a769-1c1f962982a1 ==============================
+[0m09:40:01.260924 [info ] [MainThread]: Running with dbt=1.7.4
+[0m09:40:01.261335 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt clean', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m09:40:01.319857 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b2097c04-1b4a-42b3-a769-1c1f962982a1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea593c6770>]}
+[0m09:40:01.322811 [debug] [MainThread]: Resource report: {"command_name": "clean", "command_success": true, "command_wall_clock_time": 0.09506877, "process_user_time": 1.31706, "process_kernel_time": 0.079821, "process_mem_max_rss": "93192", "process_out_blocks": "8", "process_in_blocks": "0"}
+[0m09:40:01.323260 [debug] [MainThread]: Command `dbt clean` succeeded at 09:40:01.323149 after 0.10 seconds
+[0m09:40:01.323568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea5b29b640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea593c6710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fea59398af0>]}
+[0m09:40:01.323876 [debug] [MainThread]: Flushing usage events
+[0m09:40:53.093436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadf005b640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadee142050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadee141ff0>]}
+
+
+============================== 09:40:53.095486 | bf76a477-870a-4a3f-81f8-49224645580c ==============================
+[0m09:40:53.095486 [info ] [MainThread]: Running with dbt=1.7.4
+[0m09:40:53.095877 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt build --log-level debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:40:53.374505 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'bf76a477-870a-4a3f-81f8-49224645580c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadee142140>]}
+[0m09:40:53.441010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'bf76a477-870a-4a3f-81f8-49224645580c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faded288070>]}
+[0m09:40:53.441722 [info ] [MainThread]: Registered adapter: athena=1.7.1
+[0m09:40:53.448072 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m09:40:53.448551 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m09:40:53.448880 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'bf76a477-870a-4a3f-81f8-49224645580c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faded148e50>]}
+[0m09:40:54.208922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'bf76a477-870a-4a3f-81f8-49224645580c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadebdde980>]}
+[0m09:40:54.214831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'bf76a477-870a-4a3f-81f8-49224645580c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadecee6cb0>]}
+[0m09:40:54.215298 [info ] [MainThread]: Found 1 model, 4 sources, 0 exposures, 0 metrics, 423 macros, 0 groups, 0 semantic models
+[0m09:40:54.216339 [info ] [MainThread]: 
+[0m09:40:54.216918 [debug] [MainThread]: Acquiring new athena connection 'master'
+[0m09:40:54.218137 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog'
+[0m09:40:54.218654 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:40:55.461599 [debug] [ThreadPool]: On list_awsdatacatalog: Close
+[0m09:40:55.463364 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_awsdatacatalog, now list_awsdatacatalog_cr_default_timoguin)
+[0m09:40:55.463875 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:40:56.778220 [debug] [ThreadPool]: On list_awsdatacatalog_cr_default_timoguin: Close
+[0m09:40:56.779318 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'bf76a477-870a-4a3f-81f8-49224645580c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadebe124d0>]}
+[0m09:40:56.780092 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m09:40:56.780401 [info ] [MainThread]: 
+[0m09:40:56.784818 [debug] [Thread-1 (]: Began running node model.local_delivery_service.transactions_unioned
+[0m09:40:56.785355 [info ] [Thread-1 (]: 1 of 1 START sql table model cr_default_timoguin.transactions_unioned .......... [RUN]
+[0m09:40:56.786020 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_awsdatacatalog_cr_default_timoguin, now model.local_delivery_service.transactions_unioned)
+[0m09:40:56.786409 [debug] [Thread-1 (]: Began compiling node model.local_delivery_service.transactions_unioned
+[0m09:40:56.792933 [debug] [Thread-1 (]: Writing injected SQL for node "model.local_delivery_service.transactions_unioned"
+[0m09:40:56.794026 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (compile): 09:40:56.786606 => 09:40:56.793819
+[0m09:40:56.794393 [debug] [Thread-1 (]: Began executing node model.local_delivery_service.transactions_unioned
+[0m09:40:56.832098 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:40:57.816524 [debug] [Thread-1 (]: Athena adapter: S3 path does not exist
+[0m09:40:57.817377 [debug] [Thread-1 (]: Athena adapter: Running Athena query:
+
+  
+    create table "awsdatacatalog"."cr_default_timoguin"."transactions_unioned"
+  with (
+    table_type='iceberg',
+    is_external=false,location='s3://athena-query-results-767398138063-us-east-2/tables/cr_default_timoguin/transactions_unioned/723ee992-6150-430b-bf06-192aaa4e13ef',
+    partitioning=ARRAY['day(transaction_date)'],
+    format='parquet',
+    optimize_rewrite_delete_file_threshold=2,
+    vacuum_min_snapshots_to_keep=10,
+    vacuum_max_snapshot_age_seconds=2592000,
+    optimize_rewrite_data_file_threshold=5
+  )
+  as
+    
+
+with unioned as (
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__pfd"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__doordash"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__ubereats"
+),
+
+cleaned as (
+    select
+        lower(userid) as userid,
+        lower(transactionid) as transactionid,
+        authorized_date,
+        transaction_date,
+        clean_merchant_name,
+        lower(merchant_name) as merchant_name,
+        transaction_name,
+        amount,
+        payment_channel,
+        category_level1,
+        category_level2,
+        category_level3,
+        num_levels,
+        primary_personal_finance_category,
+        detailed_personal_finance_category,
+        merchant_address,
+        merchant_city,
+        merchant_state,
+        merchant_zip
+)
+
+select * from cleaned
+
+  
+[0m09:40:58.218151 [debug] [Thread-1 (]: Athena adapter: Athena query ID fc75b1eb-0386-49ad-be3f-ef982d70d33e
+[0m09:41:10.866885 [debug] [Thread-1 (]: Athena adapter: Athena query ID f3a11dd6-720e-47f6-b5a6-647b1d7f2126
+[0m09:41:30.577804 [debug] [Thread-1 (]: Athena adapter: Athena query ID 6db3ab78-f4da-4096-86f6-82c1f7eb80cd
+[0m09:42:01.219335 [debug] [Thread-1 (]: Athena adapter: Athena query ID 2b239bc4-5ea7-48df-9c7f-ab9f2b05f689
+[0m09:42:56.042832 [debug] [Thread-1 (]: Athena adapter: Athena query ID df6430b2-d310-4356-894e-97a9f45af210
+[0m09:44:38.955077 [debug] [Thread-1 (]: Athena adapter: Athena query ID 461993be-245f-4461-b2a3-309c82a281e6
+[0m09:44:45.415725 [debug] [Thread-1 (]: Athena adapter: CAUGHT EXCEPTION: COLUMN_NOT_FOUND: line 26:12: Column 'userid' cannot be resolved or requester is not authorized to access requested resources. You may need to manually clean the data at location 's3://athena-query-results-767398138063-us-east-2/tables/461993be-245f-4461-b2a3-309c82a281e6' before retrying. Athena will not delete data in your account.
+[0m09:44:45.416691 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (execute): 09:40:56.794595 => 09:44:45.416286
+[0m09:44:45.417232 [debug] [Thread-1 (]: On model.local_delivery_service.transactions_unioned: Close
+[0m09:44:45.418228 [error] [Thread-1 (]: [31mUnhandled error while executing [0m
+COLUMN_NOT_FOUND: line 26:12: Column 'userid' cannot be resolved or requester is not authorized to access requested resources. You may need to manually clean the data at location 's3://athena-query-results-767398138063-us-east-2/tables/461993be-245f-4461-b2a3-309c82a281e6' before retrying. Athena will not delete data in your account.
+[0m09:44:45.419981 [debug] [Thread-1 (]: Traceback (most recent call last):
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/base.py", line 372, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/base.py", line 323, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/base.py", line 419, in run
+    return self.execute(compiled_node, manifest)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/task/run.py", line 291, in execute
+    result = MacroGenerator(
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/clients/jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/clients/jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 133, in macro
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/clients/jinja.py", line 330, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/clients/jinja.py", line 257, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 763, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 777, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 42, in macro
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/sandbox.py", line 393, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/jinja2/runtime.py", line 298, in call
+    return __obj(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/impl.py", line 1256, in run_query_with_partitions_limit_catching
+    raise e
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/impl.py", line 1252, in run_query_with_partitions_limit_catching
+    cursor = self._run_query(sql, catch_partitions_limit=True)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/impl.py", line 1333, in _run_query
+    raise e
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/impl.py", line 1330, in _run_query
+    cursor.execute(query, catch_partitions_limit=catch_partitions_limit)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/connections.py", line 200, in execute
+    return retry(inner)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 379, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 325, in iter
+    raise retry_exc.reraise()
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 158, in reraise
+    raise self.last_attempt.result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 451, in result
+    return self.__get_result()
+  File "/usr/lib/python3.10/concurrent/futures/_base.py", line 403, in __get_result
+    raise self._exception
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/tenacity/__init__.py", line 382, in __call__
+    result = fn(*args, **kwargs)
+  File "/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/.venv/lib/python3.10/site-packages/dbt/adapters/athena/connections.py", line 182, in inner
+    raise OperationalError(query_execution.state_change_reason)
+pyathena.error.OperationalError: COLUMN_NOT_FOUND: line 26:12: Column 'userid' cannot be resolved or requester is not authorized to access requested resources. You may need to manually clean the data at location 's3://athena-query-results-767398138063-us-east-2/tables/461993be-245f-4461-b2a3-309c82a281e6' before retrying. Athena will not delete data in your account.
+
+[0m09:44:45.420687 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'bf76a477-870a-4a3f-81f8-49224645580c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faded005e10>]}
+[0m09:44:45.421472 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model cr_default_timoguin.transactions_unioned . [[31mERROR[0m in 228.63s]
+[0m09:44:45.421984 [debug] [Thread-1 (]: Finished running node model.local_delivery_service.transactions_unioned
+[0m09:44:45.424904 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:44:45.425277 [debug] [MainThread]: Connection 'model.local_delivery_service.transactions_unioned' was properly closed.
+[0m09:44:45.425635 [info ] [MainThread]: 
+[0m09:44:45.425968 [info ] [MainThread]: Finished running 1 table model in 0 hours 3 minutes and 51.21 seconds (231.21s).
+[0m09:44:45.426549 [debug] [MainThread]: Command end result
+[0m09:44:45.435197 [info ] [MainThread]: 
+[0m09:44:45.435576 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m09:44:45.435900 [info ] [MainThread]: 
+[0m09:44:45.436213 [error] [MainThread]:   COLUMN_NOT_FOUND: line 26:12: Column 'userid' cannot be resolved or requester is not authorized to access requested resources. You may need to manually clean the data at location 's3://athena-query-results-767398138063-us-east-2/tables/461993be-245f-4461-b2a3-309c82a281e6' before retrying. Athena will not delete data in your account.
+[0m09:44:45.436514 [info ] [MainThread]: 
+[0m09:44:45.436837 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+[0m09:44:45.437879 [debug] [MainThread]: Resource report: {"command_name": "build", "command_wall_clock_time": 232.37752, "process_user_time": 3.452289, "process_kernel_time": 0.098076, "process_mem_max_rss": "162512", "process_out_blocks": "2800", "command_success": false, "process_in_blocks": "0"}
+[0m09:44:45.438493 [debug] [MainThread]: Command `dbt build` failed at 09:44:45.438363 after 232.38 seconds
+[0m09:44:45.438952 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadf005b640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faded288070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faded148970>]}
+[0m09:44:45.439308 [debug] [MainThread]: Flushing usage events
+[0m09:47:05.192803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13f22c3520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13f0569fc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13f0569f60>]}
+
+
+============================== 09:47:05.194810 | 454b2cc9-9240-4f51-9c2f-8d8ac245df9e ==============================
+[0m09:47:05.194810 [info ] [MainThread]: Running with dbt=1.7.4
+[0m09:47:05.195202 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt build --log-level debug', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m09:47:05.467704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '454b2cc9-9240-4f51-9c2f-8d8ac245df9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13f056a0b0>]}
+[0m09:47:05.535129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '454b2cc9-9240-4f51-9c2f-8d8ac245df9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ef53e350>]}
+[0m09:47:05.535856 [info ] [MainThread]: Registered adapter: athena=1.7.1
+[0m09:47:05.542022 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m09:47:05.543983 [debug] [MainThread]: Failed to load parsed file from disk at /home/timoguin/dev/tiki/data-consumer-examples/examples/local_delivery_service/target/partial_parse.msgpack: bool is not allowed for map key when strict_map_key=True
+[0m09:47:05.544365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '454b2cc9-9240-4f51-9c2f-8d8ac245df9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ef75d780>]}
+[0m09:47:06.378167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '454b2cc9-9240-4f51-9c2f-8d8ac245df9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ee2857e0>]}
+[0m09:47:06.385219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '454b2cc9-9240-4f51-9c2f-8d8ac245df9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ee286680>]}
+[0m09:47:06.385772 [info ] [MainThread]: Found 1 model, 4 sources, 0 exposures, 0 metrics, 423 macros, 0 groups, 0 semantic models
+[0m09:47:06.386998 [info ] [MainThread]: 
+[0m09:47:06.387639 [debug] [MainThread]: Acquiring new athena connection 'master'
+[0m09:47:06.388691 [debug] [ThreadPool]: Acquiring new athena connection 'list_awsdatacatalog'
+[0m09:47:06.389261 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:47:07.682423 [debug] [ThreadPool]: On list_awsdatacatalog: Close
+[0m09:47:07.684078 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_awsdatacatalog, now list_awsdatacatalog_cr_default_timoguin)
+[0m09:47:07.684597 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:47:09.283632 [debug] [ThreadPool]: On list_awsdatacatalog_cr_default_timoguin: Close
+[0m09:47:09.284681 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '454b2cc9-9240-4f51-9c2f-8d8ac245df9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ef254220>]}
+[0m09:47:09.285441 [info ] [MainThread]: Concurrency: 8 threads (target='dev')
+[0m09:47:09.285785 [info ] [MainThread]: 
+[0m09:47:09.289385 [debug] [Thread-1 (]: Began running node model.local_delivery_service.transactions_unioned
+[0m09:47:09.290055 [info ] [Thread-1 (]: 1 of 1 START sql view model cr_default_timoguin.transactions_unioned ........... [RUN]
+[0m09:47:09.290767 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_awsdatacatalog_cr_default_timoguin, now model.local_delivery_service.transactions_unioned)
+[0m09:47:09.291181 [debug] [Thread-1 (]: Began compiling node model.local_delivery_service.transactions_unioned
+[0m09:47:09.298033 [debug] [Thread-1 (]: Writing injected SQL for node "model.local_delivery_service.transactions_unioned"
+[0m09:47:09.298759 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (compile): 09:47:09.291416 => 09:47:09.298539
+[0m09:47:09.299122 [debug] [Thread-1 (]: Began executing node model.local_delivery_service.transactions_unioned
+[0m09:47:09.318347 [debug] [Thread-1 (]: Writing runtime sql for node "model.local_delivery_service.transactions_unioned"
+[0m09:47:09.319592 [debug] [Thread-1 (]: Using athena connection "model.local_delivery_service.transactions_unioned"
+[0m09:47:09.320010 [debug] [Thread-1 (]: On model.local_delivery_service.transactions_unioned: -- /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "athena", "target_name": "dev", "node_id": "model.local_delivery_service.transactions_unioned"} */
+create or replace view
+    "awsdatacatalog"."cr_default_timoguin"."transactions_unioned"
+  as
+    
+
+with unioned as (
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__pfd"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__doordash"
+    union all
+    select * from "awsdatacatalog"."cr_default"."stg_delivery__ubereats"
+),
+
+cleaned as (
+    select
+        lower(userid) as userid,
+        lower(transactionid) as transactionid,
+        authorized_date,
+        transaction_date,
+        clean_merchant_name,
+        lower(merchant_name) as merchant_name,
+        transaction_name,
+        amount,
+        payment_channel,
+        category_level1,
+        category_level2,
+        category_level3,
+        num_levels,
+        primary_personal_finance_category,
+        detailed_personal_finance_category,
+        merchant_address,
+        merchant_city,
+        merchant_state,
+        merchant_zip
+    from unioned
+)
+
+select * from cleaned
+
+[0m09:47:09.320376 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:47:10.323980 [debug] [Thread-1 (]: Athena adapter: Athena query ID f8bf3c3c-284e-4729-b4f9-551c8b757e70
+[0m09:47:11.738885 [debug] [Thread-1 (]: SQL status: OK -1 in 2.0 seconds
+[0m09:47:12.372965 [debug] [Thread-1 (]: Athena adapter: Total table versions: ['0']
+[0m09:47:12.374158 [debug] [Thread-1 (]: Athena adapter: Versions to delete: []
+[0m09:47:12.378614 [debug] [Thread-1 (]: Timing info for model.local_delivery_service.transactions_unioned (execute): 09:47:09.299349 => 09:47:12.378429
+[0m09:47:12.379013 [debug] [Thread-1 (]: On model.local_delivery_service.transactions_unioned: Close
+[0m09:47:12.379716 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '454b2cc9-9240-4f51-9c2f-8d8ac245df9e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ec2d9150>]}
+[0m09:47:12.380282 [info ] [Thread-1 (]: 1 of 1 OK created sql view model cr_default_timoguin.transactions_unioned ...... [[32mOK -1[0m in 3.09s]
+[0m09:47:12.380783 [debug] [Thread-1 (]: Finished running node model.local_delivery_service.transactions_unioned
+[0m09:47:12.382806 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:47:12.383147 [debug] [MainThread]: Connection 'model.local_delivery_service.transactions_unioned' was properly closed.
+[0m09:47:12.384002 [info ] [MainThread]: 
+[0m09:47:12.384339 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 6.00 seconds (6.00s).
+[0m09:47:12.384867 [debug] [MainThread]: Command end result
+[0m09:47:12.390207 [info ] [MainThread]: 
+[0m09:47:12.390626 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:47:12.390944 [info ] [MainThread]: 
+[0m09:47:12.391244 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m09:47:12.391879 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 7.231191, "process_user_time": 3.266492, "process_kernel_time": 0.157421, "process_mem_max_rss": "163548", "process_out_blocks": "2744", "process_in_blocks": "0"}
+[0m09:47:12.392380 [debug] [MainThread]: Command `dbt build` succeeded at 09:47:12.392249 after 7.23 seconds
+[0m09:47:12.392759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13f22c3520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ef2541c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13ef6070a0>]}
+[0m09:47:12.393119 [debug] [MainThread]: Flushing usage events

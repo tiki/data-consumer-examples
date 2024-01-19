@@ -1,3 +1,17 @@
+{{
+  config(
+    table_type='iceberg',
+    format='parquet',
+    partitioned_by=['day(transaction_date)'],
+    table_properties={
+      'optimize_rewrite_data_file_threshold': '5',
+      'optimize_rewrite_delete_file_threshold': '2',
+      'vacuum_min_snapshots_to_keep': '10',
+      'vacuum_max_snapshot_age_seconds': '2592000'
+    }
+  )
+}}
+
 with unioned as (
     select * from {{ source("tiki_cr_default", "stg_delivery__pfd") }}
     union all
@@ -27,6 +41,7 @@ cleaned as (
         merchant_city,
         merchant_state,
         merchant_zip
+    from unioned
 )
 
 select * from cleaned

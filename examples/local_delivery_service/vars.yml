@@ -11,9 +11,9 @@ athena_database: awsdatacatalog
 athena_schema: cr_default
 
 # My Athena workgroup and query results bucket
-athena_region: us-east-1
+athena_region: us-east-2
 athena_workgroup: primary
-athena_s3_staging_dir: s3://athena-query-results-767398138063-us-east-3/
+athena_s3_staging_dir: s3://athena-query-results-767398138063-us-east-2/
 
 # I'm using a named AWS Profile to source temporary credentials
 # from IAM Identity Center

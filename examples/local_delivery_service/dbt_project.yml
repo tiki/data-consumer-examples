@@ -4,6 +4,7 @@ profile: athena
 models:
   local_delivery_service:
     materialized: table
+    +schema: timoguin
     staging:
       +materialized: view
 
