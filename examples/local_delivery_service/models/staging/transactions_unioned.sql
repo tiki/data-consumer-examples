@@ -1,33 +1,23 @@
-{{
-  config(
-    table_type='iceberg',
-    format='parquet',
-    partitioned_by=['day(transaction_date)'],
-    table_properties={
-      'optimize_rewrite_data_file_threshold': '5',
-      'optimize_rewrite_delete_file_threshold': '2',
-      'vacuum_min_snapshots_to_keep': '10',
-      'vacuum_max_snapshot_age_seconds': '2592000'
-    }
-  )
-}}
-
 with unioned as (
-    select * from {{ source("tiki_cr_default", "stg_delivery__pfd") }}
+    select 'premium_food_delivery' as merchant_id, *
+    from {{ source("tiki_cr_default", "stg_delivery__pfd") }}
     union all
-    select * from {{ source("tiki_cr_default", "stg_delivery__doordash") }}
+    select 'doordash' as merchant_id, *
+    from {{ source("tiki_cr_default", "stg_delivery__doordash") }}
     union all
-    select * from {{ source("tiki_cr_default", "stg_delivery__ubereats") }}
+    select 'uber_eats' as merchant_id, *
+    from {{ source("tiki_cr_default", "stg_delivery__ubereats") }}
 ),
 
 cleaned as (
     select
+        merchant_id,
         lower(userid) as userid,
         lower(transactionid) as transactionid,
         authorized_date,
         transaction_date,
         clean_merchant_name,
-        lower(merchant_name) as merchant_name,
+        merchant_name,
         transaction_name,
         amount,
         payment_channel,
