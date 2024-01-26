@@ -1,6 +1,13 @@
 name: local_delivery_service
 profile: athena
 
+models:
+  local_delivery_service:
+    materialized: table
+    +schema: timoguin
+    staging:
+      +materialized: view
+
 vars:
   # Identifers for building subscription queries with TIKI.
   #
@@ -12,8 +19,9 @@ vars:
 
   # Table subscription details
   table_raw_premium: stg_delivery__pfd
-  table_raw_doordash: stg_delivery__dd
-  table_raw_ubereats: stg_delivery__ue
+  table_raw_doordash: stg_delivery__doordash
+  table_raw_ubereats: stg_delivery__ubereats
+  table_raw_demographics_tn: stg_demographics__tn
 
   # I'm using a named AWS Profile to source temporary credentials
   # from IAM Identity Center

@@ -1,0 +1,21 @@
+on: 2
+
+sources:
+  - name: tiki_cr_default
+    description: >
+      TIKI "default" cleanroom.
+
+      This source is a TIKI-hosted database registered in Glue Catalog / LakeFormation
+      and shared with our account via Resource Access Manager and LakeFormation cross-account
+      resource links. It is registered in our account and accessible via the "cr_default"
+      schema.
+
+      This database contains a collection of queryable Iceberg tables.
+    database: awsdatacatalog
+    schema: cr_default
+    loader: tiki-cleanrooms/cr_b30d1b76_d86f_40cb_bfa0_4632aa2f9a71
+    tables:
+      - name: stg_delivery__pfd
+      - name: stg_delivery__doordash
+      - name: stg_delivery__ubereats
+      - name: stg_demographics__tn
